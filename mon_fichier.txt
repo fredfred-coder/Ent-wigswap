@@ -433,4 +433,16 @@ fatal: Need to specify how to reconcile divergent branches.
 [K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ml[27ml[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
 error: cannot pull with rebase: You have unstaged changes.
 error: please commit or stash them.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit add .[27m
+[7mgit commit -m "Votre message de commit ici"[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27ma[27md[27md[27m [27m.[1B[27mg[27mi[27mt[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m [27m-[27mm[27m [27m"[27mV[27mo[27mt[27mr[27me[27m [27mm[27me[27ms[27ms[27ma[27mg[27me[27m [27md[27me[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m [27mi[27mc[27mi[27m"[1B[K[?2004l
+[main 80cfdec] Votre message de commit ici
+ 1 file changed, 121 insertions(+), 1 deletion(-)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit stash[27m
+[K[A[49C[27mg[27mi[27mt[27m [27ms[27mt[27ma[27ms[27mh[1B[K[?2004l
+No local changes to save
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit pull origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ml[27ml[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
 [1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h

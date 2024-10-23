@@ -1,0 +1,102 @@
+Script started on Wed Oct 23 00:37:52 2024
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mmv typescript mon_fichier.txt[27m
+[K[A[49C[27mm[27mv[27m [27mt[27my[27mp[27me[27ms[27mc[27mr[27mi[27mp[27mt[27m [27mm[27mo[27mn[27m_[27mf[27mi[27mc[27mh[27mi[27me[27mr[27m.[27mt[27mx[27mt[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mmv typescript /Users/frederictheral/mon_dossier/mon_fichier.tx[7mt[27m[K
+[K[A[A[49C[27mm[27mv[27m [27mt[27my[27mp[27me[27ms[27mc[27mr[27mi[27mp[27mt[27m [27m/[27mU[27ms[27me[27mr[27ms[27m/[27mf[27mr[27me[27md[27me[27mr[27mi[27mc[27mt[27mh[27me[27mr[27ma[27ml[27m/[27mm[27mo[27mn[27m_[27md[27mo[27ms[27ms[27mi[27me[27mr[27m/[27mm[27mo[27mn[27m_[27mf[27mi[27mc[27mh[27mi[27me[27mr[27m.[27mt[27mxt[1B[K[?2004l
+mv: rename typescript to /Users/frederictheral/mon_dossier/mon_fichier.txt: No such file or directory
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mmkdir /Users/frederictheral/mon_dossier[27m
+[K[A[49C[27mm[27mk[27md[27mi[27mr[27m [27m/[27mU[27ms[27me[27mr[27ms[27m/[27mf[27mr[27me[27md[27me[27mr[27mi[27mc[27mt[27mh[27me[27mr[27ma[27ml[27m/[27mm[27mo[27mn[27m_[27md[27mo[27ms[27ms[27mi[27me[27mr[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mmv typescript /Users/frederictheral/mon_dossier/mon_fichier.tx[7mt[27m[K
+[K[A[A[49C[27mm[27mv[27m [27mt[27my[27mp[27me[27ms[27mc[27mr[27mi[27mp[27mt[27m [27m/[27mU[27ms[27me[27mr[27ms[27m/[27mf[27mr[27me[27md[27me[27mr[27mi[27mc[27mt[27mh[27me[27mr[27ma[27ml[27m/[27mm[27mo[27mn[27m_[27md[27mo[27ms[27ms[27mi[27me[27mr[27m/[27mm[27mo[27mn[27m_[27mf[27mi[27mc[27mh[27mi[27me[27mr[27m.[27mt[27mxt[1B[K[?2004l
+mv: rename typescript to /Users/frederictheral/mon_dossier/mon_fichier.txt: No such file or directory
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mmkdir /Users/frederictheral/mon_dossier[27m
+[K[A[49C[27mm[27mk[27md[27mi[27mr[27m [27m/[27mU[27ms[27me[27mr[27ms[27m/[27mf[27mr[27me[27md[27me[27mr[27mi[27mc[27mt[27mh[27me[27mr[27ma[27ml[27m/[27mm[27mo[27mn[27m_[27md[27mo[27ms[27ms[27mi[27me[27mr[1B[K[?2004l
+mkdir: /Users/frederictheral/mon_dossier: File exists
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mls /Users/frederictheral/mon_dossier[27m
+[K[A[49C[27ml[27ms[27m [27m/[27mU[27ms[27me[27mr[27ms[27m/[27mf[27mr[27me[27md[27me[27mr[27mi[27mc[27mt[27mh[27me[27mr[27ma[27ml[27m/[27mm[27mo[27mn[27m_[27md[27mo[27ms[27ms[27mi[27me[27mr[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mmv typescript /Users/frederictheral/mon_dossier/mon_fichier.tx[7mt[27m[K
+[K[A[A[49C[27mm[27mv[27m [27mt[27my[27mp[27me[27ms[27mc[27mr[27mi[27mp[27mt[27m [27m/[27mU[27ms[27me[27mr[27ms[27m/[27mf[27mr[27me[27md[27me[27mr[27mi[27mc[27mt[27mh[27me[27mr[27ma[27ml[27m/[27mm[27mo[27mn[27m_[27md[27mo[27ms[27ms[27mi[27me[27mr[27m/[27mm[27mo[27mn[27m_[27mf[27mi[27mc[27mh[27mi[27me[27mr[27m.[27mt[27mxt[1B[K[?2004l
+mv: rename typescript to /Users/frederictheral/mon_dossier/mon_fichier.txt: No such file or directory
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mls[27m
+[K[A[49C[27ml[27ms[1B[K[?2004l
+README.md
+Y
+analysis_options.yaml
+android
+assets
+build
+dataconnect
+dataconnect-generated
+extensions
+firebase
+firebase.json
+firestore.indexes.json
+firestore.rules
+functions
+ios
+lib
+macos
+mon_fichier.txt
+mon_historique.txt
+pubspec.lock
+pubspec.yaml
+ssh-keygen -t rsa -b 4096 -C "ton-email@example.com"
+ssh-keygen -t rsa -b 4096 -C "ton-email@example.com".pub
+test
+web
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgpg --list-secret-keys --keyid-format LONG[27m
+[K[A[49C[27mg[27mp[27mg[27m [27m-[27m-[27ml[27mi[27ms[27mt[27m-[27ms[27me[27mc[27mr[27me[27mt[27m-[27mk[27me[27my[27ms[27m [27m-[27m-[27mk[27me[27my[27mi[27md[27m-[27mf[27mo[27mr[27mm[27ma[27mt[27m [27mL[27mO[27mN[27mG[1B[K[?2004l
+[keyboxd]
+---------
+sec   rsa3072/E6182E285E3E5FFA 2024-10-22 [SC] [expire : 2025-10-17]
+      5F3C93BE6EE649B5094DA61FE6182E285E3E5FFA
+uid                [  ultime ] wigswag <theralfrederic@outlook.com>
+ssb   rsa3072/E6E7278D6BCFB7EB 2024-10-22 [E] [expire : 2025-10-17]
+
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgpg --armor --export E6182E285E3E5FFA[27m
+[K[A[49C[27mg[27mp[27mg[27m [27m-[27m-[27ma[27mr[27mm[27mo[27mr[27m [27m-[27m-[27me[27mx[27mp[27mo[27mr[27mt[27m [27mE[27m6[27m1[27m8[27m2[27mE[27m2[27m8[27m5[27mE[27m3[27mE[27m5[27mF[27mF[27mA[1B[K[?2004l
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+=R4BE
+-----END PGP PUBLIC KEY BLOCK-----
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit init[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mi[27mn[27mi[27mt[1B[K[?2004l
+Reinitialized existing Git repository in /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/.git/
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h

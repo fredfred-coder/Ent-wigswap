@@ -313,4 +313,124 @@ Hi fredfred-coder! You've successfully authenticated, but GitHub does not provid
 [1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit add .[27m
 [K[A[49C[27mg[27mi[27mt[27m [27ma[27md[27md[27m [27m.[1B[K[?2004l
 [1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit add .[27m
-[K
+[K[A[49C[27mg[27mi[27mt[27m [27ma[27md[27md[27m [27m.[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit commit -m "Premier commit avec le projet wigswap"[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m [27m-[27mm[27m [27m"[27mP[27mr[27me[27mm[27mi[27me[27mr[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m [27ma[27mv[27me[27mc[27m [27ml[27me[27m [27mp[27mr[27mo[27mj[27me[27mt[27m [27mw[27mi[27mg[27ms[27mw[27ma[27mp[27m"[1B[K[?2004l
+[main 1ab9641] Premier commit avec le projet wigswap
+ 1 file changed, 44 insertions(+), 1 deletion(-)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote add origin https://github.com/fredfred-coder/wigswa[7mp[7m.git[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27ma[27md[27md[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m/[27mf[27mr[27me[27md[27mf[27mr[27me[27md[27m-[27mc[27mo[27md[27me[27mr[27m/[27mw[27mi[27mg[27ms[27mw[27map[27m.[27mg[27mi[27mt[1B[K[?2004l
+error: remote origin already exists.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit checkout main  # ou git checkout master selon le nom de ta[7m [7mbranche[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mc[27mh[27me[27mc[27mk[27mo[27mu[27mt[27m [27mm[27ma[27mi[27mn[27m [27m [27m#[27m [27mo[27mu[27m [27mg[27mi[27mt[27m [27mc[27mh[27me[27mc[27mk[27mo[27mu[27mt[27m [27mm[27ma[27ms[27mt[27me[27mr[27m [27ms[27me[27ml[27mo[27mn[27m [27ml[27me[27m [27mn[27mo[27mm[27m [27md[27me[27m [27mt[27ma [27mb[27mr[27ma[27mn[27mc[27mh[27me[1B[K[?2004l
+error: pathspec '#' did not match any file(s) known to git
+error: pathspec 'ou' did not match any file(s) known to git
+error: pathspec 'git' did not match any file(s) known to git
+error: pathspec 'checkout' did not match any file(s) known to git
+error: pathspec 'master' did not match any file(s) known to git
+error: pathspec 'selon' did not match any file(s) known to git
+error: pathspec 'le' did not match any file(s) known to git
+error: pathspec 'nom' did not match any file(s) known to git
+error: pathspec 'de' did not match any file(s) known to git
+error: pathspec 'ta' did not match any file(s) known to git
+error: pathspec 'branche' did not match any file(s) known to git
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote -v[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27m-[27mv[1B[K[?2004l
+origin	git@github.com:frederictheral/wigswag.git (fetch)
+origin	git@github.com:frederictheral/wigswag.git (push)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote set-url origin https://github.com/fredfred-coder/wi[7mg[7mswap.git[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27ms[27me[27mt[27m-[27mu[27mr[27ml[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m/[27mf[27mr[27me[27md[27mf[27mr[27me[27md[27m-[27mc[27mo[27md[27me[27mr[27m/[27mw[27mig[27ms[27mw[27ma[27mp[27m.[27mg[27mi[27mt[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote set-url origin https://github.com/fredfred-coder/wi[7mg[7mswap.git[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27ms[27me[27mt[27m-[27mu[27mr[27ml[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m/[27mf[27mr[27me[27md[27mf[27mr[27me[27md[27m-[27mc[27mo[27md[27me[27mr[27m/[27mw[27mig[27ms[27mw[27ma[27mp[27m.[27mg[27mi[27mt[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote -v[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27m-[27mv[1B[K[?2004l
+origin	https://github.com/fredfred-coder/wigswap.git (fetch)
+origin	https://github.com/fredfred-coder/wigswap.git (push)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push -u origin main  # ou "git push -u origin master" selo[7mn[7m ta branche[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[27m [27m [27m#[27m [27mo[27mu[27m [27m"[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27ms[27mt[27me[27mr[27m"[27m [27ms[27me[27ml[27mon[27m [27mt[27ma[27m [27mb[27mr[27ma[27mn[27mc[27mh[27me[1B[K[?2004l
+fatal: invalid refspec 'git push -u origin master'
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote -v[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27m-[27mv[1B[K[?2004l
+origin	https://github.com/fredfred-coder/wigswap.git (fetch)
+origin	https://github.com/fredfred-coder/wigswap.git (push)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit branch[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mb[27mr[27ma[27mn[27mc[27mh[1B[K[?2004l
+[?1h=* [32mmain[m[m
+[K[?1l>[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push -u origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+Username for 'https://github.com': fredfred-coder
+Password for 'https://fredfred-coder@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/fredfred-coder/wigswap.git/'
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgithub_pat_11AR5JQ5A0N2vLabqLSxdE_2TjhFufiFhjOl44XtEkzDitGdixF[7mn[7mC46eJW1tDweEOqIEKQJFZUangYyLiX[27m[K[A[18C[27mg[27mi[27mt[27mh[27mu[27mb[27m_[27mp[27ma[27mt[27m_[27m1[27m1[27mA[27mR[27m5[27mJ[27mQ[27m5[27mA[27m0[27mN[27m2[27mv[27mL[27ma[27mb[27mq[27mL[27mS[27mx[27md[27mE[27m_[27m2[27mT[27mj[27mh[27mF[27mu[27mf[27mi[27mF[27mh[27mj[27mO[27ml[27m4[27m4[27mX[27mt[27mE[27mk[27mz[27mD[27mi[27mt[27mG[27md[27mi[27mx[27mFn[27mC[27m4[27m6[27me[27mJ[27mW[27m1[27mt[27mD[27mw[27me[27mE[27mO[27mq[27mI[27mE[27mK[27mQ[27mJ[27mF[27mZ[27mU[27ma[27mn[27mg[27mY[27my[27mL[27mi[27mX[?2004l
+zsh: command not found: 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
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgithub_pat_11AR5JQ5A0N2vLabqLSxdE_2TjhFufiFhjOl44XtEkzDitGdixF[7mn[7mC46eJW1tDweEOqIEKQJFZUangYyLiX[27m[K[A[18C[27mg[27mi[27mt[27mh[27mu[27mb[27m_[27mp[27ma[27mt[27m_[27m1[27m1[27mA[27mR[27m5[27mJ[27mQ[27m5[27mA[27m0[27mN[27m2[27mv[27mL[27ma[27mb[27mq[27mL[27mS[27mx[27md[27mE[27m_[27m2[27mT[27mj[27mh[27mF[27mu[27mf[27mi[27mF[27mh[27mj[27mO[27ml[27m4[27m4[27mX[27mt[27mE[27mk[27mz[27mD[27mi[27mt[27mG[27md[27mi[27mx[27mFn[27mC[27m4[27m6[27me[27mJ[27mW[27m1[27mt[27mD[27mw[27me[27mE[27mO[27mq[27mI[27mE[27mK[27mQ[27mJ[27mF[27mZ[27mU[27ma[27mn[27mg[27mY[27my[27mL[27mi[27mX[?2004l
+zsh: command not found: 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
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7m git push -u origin main[27m[24D[27m [27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[?2004l
+Username for 'https://github.com': fredfred-coder
+Password for 'https://fredfred-coder@github.com': 
+remote: invalid credentials
+fatal: Authentication failed for 'https://github.com/fredfred-coder/wigswap.git/'
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push -u origin main[27m[23D[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[?2004l
+Username for 'https://github.com': fredfred-codeur
+Password for 'https://fredfred-codeur@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/fredfred-coder/wigswap.git/'
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push -u origin main[27m[23D[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[?2004l
+Username for 'https://github.com': fredfred-codeur
+Password for 'https://fredfred-codeur@github.com': 
+remote: Write access to repository not granted.
+fatal: unable to access 'https://github.com/fredfred-coder/wigswap.git/': The requested URL returned error: 403
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push -u origin main[27m[23D[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[?2004l
+Username for 'https://github.com': fredfred-codeur
+Password for 'https://fredfred-codeur@github.com': 
+To https://github.com/fredfred-coder/wigswap.git
+ [31m! [rejected]       [m main -> main (fetch first)
+[31merror: failed to push some refs to 'https://github.com/fredfred-coder/wigswap.git'
+[m[33mhint: Updates were rejected because the remote contains work that you do[m
+[33mhint: not have locally. This is usually caused by another repository pushing[m
+[33mhint: to the same ref. You may want to first integrate the remote changes[m
+[33mhint: (e.g., 'git pull ...') before pushing again.[m
+[33mhint: See the 'Note about fast-forwards' in 'git push --help' for details.[m
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit pull origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ml[27ml[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+remote: Enumerating objects: 3, done.[K
+remote: Counting objects:  33% (1/3)[Kremote: Counting objects:  66% (2/3)[Kremote: Counting objects: 100% (3/3)[Kremote: Counting objects: 100% (3/3), done.[K
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)[K
+Unpacking objects:  33% (1/3)Unpacking objects:  66% (2/3)Unpacking objects: 100% (3/3)Unpacking objects: 100% (3/3), 868 bytes | 108.00 KiB/s, done.
+From https://github.com/fredfred-coder/wigswap
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+[33mhint: You have divergent branches and need to specify how to reconcile them.[m
+[33mhint: You can do so by running one of the following commands sometime before[m
+[33mhint: your next pull:[m
+[33mhint: [m
+[33mhint:   git config pull.rebase false  # merge[m
+[33mhint:   git config pull.rebase true   # rebase[m
+[33mhint:   git config pull.ff only       # fast-forward only[m
+[33mhint: [m
+[33mhint: You can replace "git config" with "git config --global" to set a default[m
+[33mhint: preference for all repositories. You can also pass --rebase, --no-rebase,[m
+[33mhint: or --ff-only on the command line to override the configured default per[m
+[33mhint: invocation.[m
+fatal: Need to specify how to reconcile divergent branches.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config pull.rebase false[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27mp[27mu[27ml[27ml[27m.[27mr[27me[27mb[27ma[27ms[27me[27m [27mf[27ma[27ml[27ms[27me[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config pull.rebase true[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27mp[27mu[27ml[27ml[27m.[27mr[27me[27mb[27ma[27ms[27me[27m [27mt[27mr[27mu[27me[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config pull.ff only[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27mp[27mu[27ml[27ml[27m.[27mf[27mf[27m [27mo[27mn[27ml[27my[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit pull origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ml[27ml[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h

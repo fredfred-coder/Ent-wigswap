@@ -99,4 +99,175 @@ oyvnl4XOiCJtGR/JAFlSAZsgvikDZC64i0GIUe54KQ==
 [1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit init[27m
 [K[A[49C[27mg[27mi[27mt[27m [27mi[27mn[27mi[27mt[1B[K[?2004l
 Reinitialized existing Git repository in /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/.git/
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit add .[27m
+[K[A[49C[27mg[27mi[27mt[27m [27ma[27md[27md[27m [27m.[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit commit -m "Sauvegarde de mes modifications"[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m [27m-[27mm[27m [27m"[27mS[27ma[27mu[27mv[27me[27mg[27ma[27mr[27md[27me[27m [27md[27me[27m [27mm[27me[27ms[27m [27mm[27mo[27md[27mi[27mf[27mi[27mc[27ma[27mt[27mi[27mo[27mn[27ms[27m"[1B[K[?2004l
+[main 032197a] Sauvegarde de mes modifications
+ Committer: FREDERIC THERAL <frederictheral@MacBook-Pro-de-FREDERIC.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 168 insertions(+)
+ create mode 100644 mon_fichier.txt
+ create mode 100644 mon_historique.txt
+ create mode 100644 "ssh-keygen -t rsa -b 4096 -C \"ton-email@example.com\""
+ create mode 100644 "ssh-keygen -t rsa -b 4096 -C \"ton-email@example.com\".pub"
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote add origin https://github.com/ton-utilisateur/ton-d[7me[7mpot.git[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27ma[27md[27md[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mh[27mt[27mt[27mp[27ms[27m:[27m/[27m/[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m/[27mt[27mo[27mn[27m-[27mu[27mt[27mi[27ml[27mi[27ms[27ma[27mt[27me[27mu[27mr[27m/[27mt[27mo[27mn[27m-[27mde[27mp[27mo[27mt[27m.[27mg[27mi[27mt[1B[K[?2004l
+error: remote origin already exists.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+Username for 'https://github.com': git remote -v
+Password for 'https://git remote -v@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ton-utilisateur/ton-depot.git/'
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mssh-add ~/.ssh/id_rsa[27m
+[K[A[49C[27ms[27ms[27mh[27m-[27ma[27md[27md[27m [27m~[27m/[27m.[27ms[27ms[27mh[27m/[27mi[27md[27m_[27mr[27ms[27ma[1B[K[?2004l
+Identity added: /Users/frederictheral/.ssh/id_rsa (theralfrederic@outlook.com)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mssh -T git@github.com[27m
+[K[A[49C[27ms[27ms[27mh[27m [27m-[27mT[27m [27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[1B[K[?2004l
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi fredfred-coder! You've successfully authenticated, but GitHub does not provide shell access.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+Username for 'https://github.com': git remote -v
+Password for 'https://git remote -v@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ton-utilisateur/ton-depot.git/'
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote set-url origin git@github.com:ton-utilisateur/ton-d[7me[7mpot.git[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27ms[27me[27mt[27m-[27mu[27mr[27ml[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m:[27mt[27mo[27mn[27m-[27mu[27mt[27mi[27ml[27mi[27ms[27ma[27mt[27me[27mu[27mr[27m/[27mt[27mo[27mn[27m-[27mde[27mp[27mo[27mt[27m.[27mg[27mi[27mt[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote -v[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27m-[27mv[1B[K[?2004l
+origin	git@github.com:ton-utilisateur/ton-depot.git (fetch)
+origin	git@github.com:ton-utilisateur/ton-depot.git (push)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mssh -T git@github.com[27m
+[K[A[49C[27ms[27ms[27mh[27m [27m-[27mT[27m [27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[1B[K[?2004l
+Hi fredfred-coder! You've successfully authenticated, but GitHub does not provide shell access.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit push origin main[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[1B[K[?2004l
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit remote -v[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27m-[27mv[1B[K[?2004l
+origin	git@github.com:ton-utilisateur/ton-depot.git (fetch)
+origin	git@github.com:ton-utilisateur/ton-depot.git (push)
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgpg --list-secret-keys --keyid-format LONG[27m
+[K[A[49C[27mg[27mp[27mg[27m [27m-[27m-[27ml[27mi[27ms[27mt[27m-[27ms[27me[27mc[27mr[27me[27mt[27m-[27mk[27me[27my[27ms[27m [27m-[27m-[27mk[27me[27my[27mi[27md[27m-[27mf[27mo[27mr[27mm[27ma[27mt[27m [27mL[27mO[27mN[27mG[1B[K[?2004l
+[keyboxd]
+---------
+sec   rsa3072/E6182E285E3E5FFA 2024-10-22 [SC] [expire : 2025-10-17]
+      5F3C93BE6EE649B5094DA61FE6182E285E3E5FFA
+uid                [  ultime ] wigswag <theralfrederic@outlook.com>
+ssb   rsa3072/E6E7278D6BCFB7EB 2024-10-22 [E] [expire : 2025-10-17]
+
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgpg --armor --export <YOUR_KEY_ID> | pbcopy[27m
+[K[A[49C[27mg[27mp[27mg[27m [27m-[27m-[27ma[27mr[27mm[27mo[27mr[27m [27m-[27m-[27me[27mx[27mp[27mo[27mr[27mt[27m [27m<[27mY[27mO[27mU[27mR[27m_[27mK[27mE[27mY[27m_[27mI[27mD[27m>[27m [27m|[27m [27mp[27mb[27mc[27mo[27mp[27my[1B[K[?2004l
+zsh: parse error near `|'
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgpg --armor --export E6182E285E3E5FFA | pbcopy[27m
+[K[A[49C[27mg[27mp[27mg[27m [27m-[27m-[27ma[27mr[27mm[27mo[27mr[27m [27m-[27m-[27me[27mx[27mp[27mo[27mr[27mt[27m [27mE[27m6[27m1[27m8[27m2[27mE[27m2[27m8[27m5[27mE[27m3[27mE[27m5[27mF[27mF[27mA[27m [27m|[27m [27mp[27mb[27mc[27mo[27mp[27my[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.signingkey E6182E285E3E5FFA[27m
+[7mgit config --global commit.gpgSign true[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27ms[27mi[27mg[27mn[27mi[27mn[27mg[27mk[27me[27my[27m [27mE[27m6[27m1[27m8[27m2[27mE[27m2[27m8[27m5[27mE[27m3[27mE[27m5[27mF[27mF[27mA[1B[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m.[27mg[27mp[27mg[27mS[27mi[27mg[27mn[27m [27mt[27mr[27mu[27me[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mcd /chemin/vers/ton/projet[27m
+[K[A[49C[27mc[27md[27m [27m/[27mc[27mh[27me[27mm[27mi[27mn[27m/[27mv[27me[27mr[27ms[27m/[27mt[27mo[27mn[27m/[27mp[27mr[27mo[27mj[27me[27mt[1B[K[?2004l
+cd: no such file or directory: /chemin/vers/ton/projet
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mcd Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[27m[59D[27mc[27md[27m [27mD[27mr[27mo[27mp[27mb[27mo[27mx[27m/[27mF[27ml[27mu[27mt[27mt[27me[27mr[27mF[27ml[27mo[27mw[27m/[27mD[27me[27mv[27me[27ml[27mo[27mp[27mp[27me[27mm[27me[27mn[27mt[27m/[27mC[27mo[27md[27me[27m/[27mv[27me[27mr[27ms[27mi[27mo[27mn[27m_[27m4[27m/[27mw[27mi[27mg[27ms[27mw[27ma[27mp[?2004l
+cd: no such file or directory: Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004hlls[?2004l
+README.md
+Y
+analysis_options.yaml
+android
+assets
+build
+dataconnect
+dataconnect-generated
+extensions
+firebase
+firebase.json
+firestore.indexes.json
+firestore.rules
+functions
+ios
+lib
+macos
+mon_fichier.txt
+mon_historique.txt
+pubspec.lock
+pubspec.yaml
+ssh-keygen -t rsa -b 4096 -C "ton-email@example.com"
+ssh-keygen -t rsa -b 4096 -C "ton-email@example.com".pub
+test
+web
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit init[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mi[27mn[27mi[27mt[1B[K[?2004l
+Reinitialized existing Git repository in /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/.git/
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.name[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.email[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27me[27mm[27ma[27mi[27ml[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.name "Ton Nom"[27m
+[7mgit config --global user.email "ton-email@example.com"[27m[K
+[K[A[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[27m [27m"[27mT[27mo[27mn[27m [27mN[27mo[27mm[27m"[1B[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27me[27mm[27ma[27mi[27ml[27m [27m"[27mt[27mo[27mn[27m-[27me[27mm[27ma[27mi[27ml[27m@[27me[27mx[27ma[27mm[27mp[27ml[27me[27m.[27mc[27mo[27mm[27m"[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.name[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[1B[K[?2004l
+Ton Nom
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.name "wigswag”[27m[39D[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[27m [27m"[27mw[27mi[27mg[27ms[27mw[27ma[27mg[27m”[?2004l
+[0m[27m[24m[Jdquote> [K[?2004h[7mgit config --global user.name "wigswag"[27m
+[K[A[8C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[27m [27m"[27mw[27mi[27mg[27ms[27mw[27ma[27mg[27m"[1B[K[?2004l
+[0m[27m[24m[Jdquote> [K[?2004h[?2004l
+[0m[27m[24m[Jdquote> [K[?2004h[7mgit config --global user.name "wigswag"[27m
+[K[A[8C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[27m [27m"[27mw[27mi[27mg[27ms[27mw[27ma[27mg[27m"[1B[K[?2004l
+[0m[27m[24m[Jdquote> [K[?2004h[7mgit config --global user.name 'wigswag'[27m
+[K[A[8C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[27m [27m'[27mw[27mi[27mg[27ms[27mw[27ma[27mg[27m'[1B[K[?2004l
+[0m[27m[24m[Jdquote> [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.name 'wigswag'[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[27m [27m'[27mw[27mi[27mg[27ms[27mw[27ma[27mg[27m'[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.name[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27mn[27ma[27mm[27me[1B[K[?2004l
+wigswag
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit add .[27m
+[K[A[49C[27mg[27mi[27mt[27m [27ma[27md[27md[27m [27m.[1B[K[?2004l
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit commit -m "Ajout de la version initiale du projet"[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m [27m-[27mm[27m [27m"[27mA[27mj[27mo[27mu[27mt[27m [27md[27me[27m [27ml[27ma[27m [27mv[27me[27mr[27ms[27mi[27mo[27mn[27m [27mi[27mn[27mi[27mt[27mi[27ma[27ml[27me[27m [27md[27mu[27m [27mp[27mr[27mo[27mj[27me[27mt[27m"[1B[K[?2004l
+error: gpg failed to sign the data
+fatal: failed to write commit object
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgpg --list-secret-keys --keyid-format LONG[27m
+[K[A[49C[27mg[27mp[27mg[27m [27m-[27m-[27ml[27mi[27ms[27mt[27m-[27ms[27me[27mc[27mr[27me[27mt[27m-[27mk[27me[27my[27ms[27m [27m-[27m-[27mk[27me[27my[27mi[27md[27m-[27mf[27mo[27mr[27mm[27ma[27mt[27m [27mL[27mO[27mN[27mG[1B[K[?2004l
+[keyboxd]
+---------
+sec   rsa3072/E6182E285E3E5FFA 2024-10-22 [SC] [expire : 2025-10-17]
+      5F3C93BE6EE649B5094DA61FE6182E285E3E5FFA
+uid                [  ultime ] wigswag <theralfrederic@outlook.com>
+ssb   rsa3072/E6E7278D6BCFB7EB 2024-10-22 [E] [expire : 2025-10-17]
+
+[1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h[7mgit config --global user.signingkey E6182E285E3E5FFA[27m
+[K[A[49C[27mg[27mi[27mt[27m [27mc[27mo[27mn[27mf[27mi[27mg[27m [27m-[27m-[27mg[27ml[27mo[27mb[27ma[27ml[27m [27mu[27ms[27me[27mr[27m.[27ms[27mi[27mg[27mn[27mi[27mn[27mg[27mk[27me[27my[27m [27mE[27m6[27m1[27m8[27m2[27mE[27m2[27m8[27m5[27mE[27m3[27mE[27m5[27mF[27mF[27mA[1B[K[?2004l
 [1m[7m%[27m[1m[0m                                                                                                               ]7;file://MacBook-Pro-de-FREDERIC.local/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap[0m[27m[24m[Jfrederictheral@MacBook-Pro-de-FREDERIC wigswap % [K[?2004h

@@ -1,0 +1,6 @@
+NSCameraUsageDescription = "\"Request Permission\"";
+NSMicrophoneUsageDescription = "In order to record audio for video, this app requires permission to access the microphone";
+NSPhotoLibraryUsageDescription = "In Order to upload date, this app requires permission to access the photo library\"";
+PermissionGroupNotification = "\"Received notofications\"";
+NSContactsUsageDescription = "\"Request permission\"";
+NSLocationWhenInUseUsageDescription = "\"Request Permission\"";

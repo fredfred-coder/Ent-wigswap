@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">920564303895-5u6huh8mhm0erfg4la1mr326igpt2ki4.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">920564303895</string>
+    <string name="google_api_key" translatable="false">AIzaSyDae4uFiypWoo7VOB1XbOy2Bizk_cvVCG0</string>
+    <string name="google_app_id" translatable="false">1:920564303895:android:136d851eac9c5e41b4b452</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDae4uFiypWoo7VOB1XbOy2Bizk_cvVCG0</string>
+    <string name="google_storage_bucket" translatable="false">wigswap-274ff.appspot.com</string>
+    <string name="project_id" translatable="false">wigswap-274ff</string>
+</resources>

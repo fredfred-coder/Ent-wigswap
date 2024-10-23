@@ -1,0 +1,1256 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mycompany.wigswap"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+9        android:targetSdkVersion="34" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:4:5-66
+14-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:4:22-64
+15    <uses-permission android:name="android.permission.CAMERA" />
+15-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:5:5-64
+15-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:5:22-62
+16    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+16-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:6:5-71
+16-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:6:22-68
+17    <uses-permission
+17-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:8:5-106
+18        android:name="android.permission.READ_EXTERNAL_STORAGE"
+18-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:8:22-77
+19        android:maxSdkVersion="32" />
+19-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:8:78-104
+20    <uses-permission
+20-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:9:5-107
+21        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+21-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:9:22-78
+22        android:maxSdkVersion="32" />
+22-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:9:79-105
+23    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+23-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:10:5-76
+23-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:10:22-74
+24    <uses-permission android:name="android.permission.READ_CONTACTS" />
+24-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:11:5-71
+24-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:11:22-69
+25    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+25-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:12:5-72
+25-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:12:22-70
+26    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+26-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:13:5-78
+26-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:13:22-76
+27    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+27-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:14:5-80
+27-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:14:22-78
+28
+29    <queries>
+29-->[:file_picker] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-19:15
+30        <intent>
+30-->[:file_picker] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-18:18
+31            <action android:name="android.intent.action.GET_CONTENT" />
+31-->[:file_picker] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-72
+31-->[:file_picker] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:15:21-69
+32
+33            <data android:mimeType="*/*" />
+33-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+34        </intent>
+35        <!-- Added to check the default browser that will host the AuthFlow. -->
+36        <intent>
+36-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:13:9-17:18
+37            <action android:name="android.intent.action.VIEW" />
+37-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:17-69
+37-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:25-66
+38
+39            <data android:scheme="http" />
+39-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+39-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+40        </intent> <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+41        <package android:name="com.android.chrome" /> <!-- Needs to be explicitly declared on Android R+ -->
+41-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:11:9-54
+41-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:11:18-51
+42        <package android:name="com.google.android.apps.maps" />
+42-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
+42-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
+43    </queries>
+44
+45    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+45-->[:firebase_analytics] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+45-->[:firebase_analytics] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+46    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+46-->[:firebase_analytics] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-68
+46-->[:firebase_analytics] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-65
+47    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+47-->[com.google.firebase:firebase-iid:21.1.0] /Users/frederictheral/.gradle/caches/transforms-3/bb981adc0a23145b82591d9ea011aa7c/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:5-82
+47-->[com.google.firebase:firebase-iid:21.1.0] /Users/frederictheral/.gradle/caches/transforms-3/bb981adc0a23145b82591d9ea011aa7c/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:22-79
+48    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+48-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:26:5-110
+48-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:26:22-107
+49    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+49-->[com.google.android.gms:play-services-measurement-impl:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/4379d1ccf74308e5fe7e7218c8a8e390/transformed/jetified-play-services-measurement-impl-22.1.0/AndroidManifest.xml:27:5-79
+49-->[com.google.android.gms:play-services-measurement-impl:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/4379d1ccf74308e5fe7e7218c8a8e390/transformed/jetified-play-services-measurement-impl-22.1.0/AndroidManifest.xml:27:22-76
+50    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+50-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:26:5-88
+50-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:26:22-85
+51    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+51-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:27:5-82
+51-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:27:22-79
+52    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+52-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/frederictheral/.gradle/caches/transforms-3/09e3b77cea3472f242e180e686141e4a/transformed/jetified-recaptcha-18.4.0/AndroidManifest.xml:9:5-98
+52-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/frederictheral/.gradle/caches/transforms-3/09e3b77cea3472f242e180e686141e4a/transformed/jetified-recaptcha-18.4.0/AndroidManifest.xml:9:22-95
+53
+54    <uses-feature
+54-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
+55        android:glEsVersion="0x00020000"
+55-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
+56        android:required="true" />
+56-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
+57
+58    <permission
+58-->[androidx.core:core:1.13.1] /Users/frederictheral/.gradle/caches/transforms-3/5af03f1e3bf82b901dd5e3b167881695/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+59        android:name="com.mycompany.wigswap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+59-->[androidx.core:core:1.13.1] /Users/frederictheral/.gradle/caches/transforms-3/5af03f1e3bf82b901dd5e3b167881695/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+60        android:protectionLevel="signature" />
+60-->[androidx.core:core:1.13.1] /Users/frederictheral/.gradle/caches/transforms-3/5af03f1e3bf82b901dd5e3b167881695/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+61
+62    <uses-permission android:name="com.mycompany.wigswap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+62-->[androidx.core:core:1.13.1] /Users/frederictheral/.gradle/caches/transforms-3/5af03f1e3bf82b901dd5e3b167881695/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+62-->[androidx.core:core:1.13.1] /Users/frederictheral/.gradle/caches/transforms-3/5af03f1e3bf82b901dd5e3b167881695/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+63
+64    <application
+64-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:15:5-69:19
+65        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+65-->[androidx.core:core:1.13.1] /Users/frederictheral/.gradle/caches/transforms-3/5af03f1e3bf82b901dd5e3b167881695/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+66        android:debuggable="true"
+67        android:extractNativeLibs="false"
+68        android:icon="@mipmap/ic_launcher"
+68-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:18:9-43
+69        android:label="WigSwap"
+69-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:16:9-32
+70        android:requestLegacyExternalStorage="true" >
+70-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:19:9-52
+71        <activity
+71-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:21:9-59:20
+72            android:name="com.mycompany.wigswap.MainActivity"
+72-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:22:13-41
+73            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+73-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:26:13-163
+74            android:exported="true"
+74-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:23:13-36
+75            android:hardwareAccelerated="true"
+75-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:27:13-47
+76            android:launchMode="singleTop"
+76-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:24:13-43
+77            android:theme="@style/LaunchTheme"
+77-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:25:13-47
+78            android:windowSoftInputMode="adjustResize" >
+78-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:28:13-55
+79
+80            <!--
+81                 Specifies an Android theme to apply to this Activity as soon as
+82                 the Android process has started. This theme is visible to the user
+83                 while the Flutter UI initializes. After that, this theme continues
+84                 to determine the Window background behind the Flutter UI.
+85            -->
+86            <meta-data
+86-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:33:13-36:17
+87                android:name="io.flutter.embedding.android.NormalTheme"
+87-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:34:15-70
+88                android:resource="@style/NormalTheme" />
+88-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:35:15-52
+89            <!--
+90                 Displays an Android View that continues showing the launch screen
+91                 Drawable until Flutter paints its first frame, then this splash
+92                 screen fades out. A splash screen is useful to avoid any visual
+93                 gap between the end of Android's launch screen and the painting of
+94                 Flutter's first frame.
+95            -->
+96            <meta-data
+96-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:42:13-45:17
+97                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+97-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:43:15-79
+98                android:resource="@drawable/launch_background" />
+98-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:44:15-61
+99
+100            <intent-filter>
+100-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:46:13-49:29
+101                <action android:name="android.intent.action.MAIN" />
+101-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:47:17-68
+101-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:47:25-66
+102
+103                <category android:name="android.intent.category.LAUNCHER" />
+103-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:48:17-76
+103-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:48:27-74
+104            </intent-filter>
+105            <!-- Deep linking -->
+106            <meta-data
+106-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:51:13-90
+107                android:name="flutter_deeplinking_enabled"
+107-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:51:24-66
+108                android:value="true" />
+108-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:51:67-87
+109
+110            <intent-filter android:autoVerify="true" >
+110-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:52:13-57:29
+110-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:52:28-53
+111                <action android:name="android.intent.action.VIEW" />
+111-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:17-69
+111-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:25-66
+112
+113                <category android:name="android.intent.category.DEFAULT" />
+113-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:17-76
+113-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:27-73
+114                <category android:name="android.intent.category.BROWSABLE" />
+114-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:17-78
+114-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:27-75
+115
+116                <data
+116-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+117                    android:host="wigswap.com"
+117-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+118                    android:scheme="wigswap" />
+118-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+119            </intent-filter>
+120        </activity>
+121
+122        <!--
+123             Don't delete the meta-data below.
+124             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+125        -->
+126        <meta-data
+126-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:63:9-65:33
+127            android:name="flutterEmbedding"
+127-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:64:13-44
+128            android:value="2" />
+128-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:65:13-30
+129        <meta-data
+129-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:68:9-99
+130            android:name="com.google.android.gms.wallet.api.enabled"
+130-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:68:20-76
+131            android:value="true" />
+131-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:68:77-97
+132
+133        <service
+133-->[:cloud_firestore] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+134            android:name="com.google.firebase.components.ComponentDiscoveryService"
+134-->[:cloud_firestore] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:10:18-89
+135            android:directBootAware="true"
+135-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:32:13-43
+136            android:exported="false" >
+136-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:68:13-37
+137            <meta-data
+137-->[:cloud_firestore] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+138                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+138-->[:cloud_firestore] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-134
+139                android:value="com.google.firebase.components.ComponentRegistrar" />
+139-->[:cloud_firestore] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_firestore/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+140            <meta-data
+140-->[:cloud_functions] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_functions/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+141                android:name="com.google.firebase.components:io.flutter.plugins.firebase.functions.FlutterFirebaseAppRegistrar"
+141-->[:cloud_functions] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_functions/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-128
+142                android:value="com.google.firebase.components.ComponentRegistrar" />
+142-->[:cloud_functions] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/cloud_functions/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+143            <meta-data
+143-->[:firebase_analytics] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:85
+144                android:name="com.google.firebase.components:io.flutter.plugins.firebase.analytics.FlutterFirebaseAppRegistrar"
+144-->[:firebase_analytics] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-128
+145                android:value="com.google.firebase.components.ComponentRegistrar" />
+145-->[:firebase_analytics] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-82
+146            <meta-data
+146-->[:firebase_auth] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+147                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+147-->[:firebase_auth] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+148                android:value="com.google.firebase.components.ComponentRegistrar" />
+148-->[:firebase_auth] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+149            <meta-data
+149-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-40:85
+150                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+150-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:39:17-128
+151                android:value="com.google.firebase.components.ComponentRegistrar" />
+151-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:40:17-82
+152            <meta-data
+152-->[:firebase_performance] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_performance/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-15:85
+153                android:name="com.google.firebase.components:io.flutter.plugins.firebase.performance.FlutterFirebaseAppRegistrar"
+153-->[:firebase_performance] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_performance/intermediates/merged_manifest/debug/AndroidManifest.xml:14:17-130
+154                android:value="com.google.firebase.components.ComponentRegistrar" />
+154-->[:firebase_performance] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_performance/intermediates/merged_manifest/debug/AndroidManifest.xml:15:17-82
+155            <meta-data
+155-->[:firebase_storage] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+156                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+156-->[:firebase_storage] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-126
+157                android:value="com.google.firebase.components.ComponentRegistrar" />
+157-->[:firebase_storage] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_storage/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+158            <meta-data
+158-->[:firebase_core] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+159                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+159-->[:firebase_core] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
+160                android:value="com.google.firebase.components.ComponentRegistrar" />
+160-->[:firebase_core] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+161            <meta-data
+161-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:69:13-71:85
+162                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+162-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:70:17-109
+163                android:value="com.google.firebase.components.ComponentRegistrar" />
+163-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:71:17-82
+164            <meta-data
+164-->[com.google.firebase:firebase-perf:21.0.1] /Users/frederictheral/.gradle/caches/transforms-3/320040284b52bf4d9fe7c79edb5ec89d/transformed/jetified-firebase-perf-21.0.1/AndroidManifest.xml:14:13-16:85
+165                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfKtxRegistrar"
+165-->[com.google.firebase:firebase-perf:21.0.1] /Users/frederictheral/.gradle/caches/transforms-3/320040284b52bf4d9fe7c79edb5ec89d/transformed/jetified-firebase-perf-21.0.1/AndroidManifest.xml:15:17-112
+166                android:value="com.google.firebase.components.ComponentRegistrar" />
+166-->[com.google.firebase:firebase-perf:21.0.1] /Users/frederictheral/.gradle/caches/transforms-3/320040284b52bf4d9fe7c79edb5ec89d/transformed/jetified-firebase-perf-21.0.1/AndroidManifest.xml:16:17-82
+167            <meta-data
+167-->[com.google.firebase:firebase-perf:21.0.1] /Users/frederictheral/.gradle/caches/transforms-3/320040284b52bf4d9fe7c79edb5ec89d/transformed/jetified-firebase-perf-21.0.1/AndroidManifest.xml:17:13-19:85
+168                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+168-->[com.google.firebase:firebase-perf:21.0.1] /Users/frederictheral/.gradle/caches/transforms-3/320040284b52bf4d9fe7c79edb5ec89d/transformed/jetified-firebase-perf-21.0.1/AndroidManifest.xml:18:17-109
+169                android:value="com.google.firebase.components.ComponentRegistrar" />
+169-->[com.google.firebase:firebase-perf:21.0.1] /Users/frederictheral/.gradle/caches/transforms-3/320040284b52bf4d9fe7c79edb5ec89d/transformed/jetified-firebase-perf-21.0.1/AndroidManifest.xml:19:17-82
+170            <meta-data
+170-->[com.google.firebase:firebase-functions:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/b3e4495bb1572b96e2cb27784025c1f8/transformed/jetified-firebase-functions-21.0.0/AndroidManifest.xml:15:13-17:85
+171                android:name="com.google.firebase.components:com.google.firebase.functions.FirebaseFunctionsKtxRegistrar"
+171-->[com.google.firebase:firebase-functions:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/b3e4495bb1572b96e2cb27784025c1f8/transformed/jetified-firebase-functions-21.0.0/AndroidManifest.xml:16:17-122
+172                android:value="com.google.firebase.components.ComponentRegistrar" />
+172-->[com.google.firebase:firebase-functions:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/b3e4495bb1572b96e2cb27784025c1f8/transformed/jetified-firebase-functions-21.0.0/AndroidManifest.xml:17:17-82
+173            <meta-data
+173-->[com.google.firebase:firebase-functions:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/b3e4495bb1572b96e2cb27784025c1f8/transformed/jetified-firebase-functions-21.0.0/AndroidManifest.xml:18:13-20:85
+174                android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar"
+174-->[com.google.firebase:firebase-functions:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/b3e4495bb1572b96e2cb27784025c1f8/transformed/jetified-firebase-functions-21.0.0/AndroidManifest.xml:19:17-111
+175                android:value="com.google.firebase.components.ComponentRegistrar" />
+175-->[com.google.firebase:firebase-functions:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/b3e4495bb1572b96e2cb27784025c1f8/transformed/jetified-firebase-functions-21.0.0/AndroidManifest.xml:20:17-82
+176            <meta-data
+176-->[com.google.firebase:firebase-iid:21.1.0] /Users/frederictheral/.gradle/caches/transforms-3/bb981adc0a23145b82591d9ea011aa7c/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:32:13-34:85
+177                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+177-->[com.google.firebase:firebase-iid:21.1.0] /Users/frederictheral/.gradle/caches/transforms-3/bb981adc0a23145b82591d9ea011aa7c/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:33:17-96
+178                android:value="com.google.firebase.components.ComponentRegistrar" />
+178-->[com.google.firebase:firebase-iid:21.1.0] /Users/frederictheral/.gradle/caches/transforms-3/bb981adc0a23145b82591d9ea011aa7c/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:34:17-82
+179            <meta-data
+179-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:57:13-59:85
+180                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+180-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:58:17-122
+181                android:value="com.google.firebase.components.ComponentRegistrar" />
+181-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:59:17-82
+182            <meta-data
+182-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:60:13-62:85
+183                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+183-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:61:17-119
+184                android:value="com.google.firebase.components.ComponentRegistrar" />
+184-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:62:17-82
+185            <meta-data
+185-->[com.google.firebase:firebase-firestore:25.1.0] /Users/frederictheral/.gradle/caches/transforms-3/fd3103fee5b4ce9a836b7b9a0ae79302/transformed/jetified-firebase-firestore-25.1.0/AndroidManifest.xml:17:13-19:85
+186                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+186-->[com.google.firebase:firebase-firestore:25.1.0] /Users/frederictheral/.gradle/caches/transforms-3/fd3103fee5b4ce9a836b7b9a0ae79302/transformed/jetified-firebase-firestore-25.1.0/AndroidManifest.xml:18:17-122
+187                android:value="com.google.firebase.components.ComponentRegistrar" />
+187-->[com.google.firebase:firebase-firestore:25.1.0] /Users/frederictheral/.gradle/caches/transforms-3/fd3103fee5b4ce9a836b7b9a0ae79302/transformed/jetified-firebase-firestore-25.1.0/AndroidManifest.xml:19:17-82
+188            <meta-data
+188-->[com.google.firebase:firebase-firestore:25.1.0] /Users/frederictheral/.gradle/caches/transforms-3/fd3103fee5b4ce9a836b7b9a0ae79302/transformed/jetified-firebase-firestore-25.1.0/AndroidManifest.xml:20:13-22:85
+189                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+189-->[com.google.firebase:firebase-firestore:25.1.0] /Users/frederictheral/.gradle/caches/transforms-3/fd3103fee5b4ce9a836b7b9a0ae79302/transformed/jetified-firebase-firestore-25.1.0/AndroidManifest.xml:21:17-111
+190                android:value="com.google.firebase.components.ComponentRegistrar" />
+190-->[com.google.firebase:firebase-firestore:25.1.0] /Users/frederictheral/.gradle/caches/transforms-3/fd3103fee5b4ce9a836b7b9a0ae79302/transformed/jetified-firebase-firestore-25.1.0/AndroidManifest.xml:22:17-82
+191            <meta-data
+191-->[com.google.firebase:firebase-storage:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/96f5425a9cfb62a58fe990c2547ab217/transformed/jetified-firebase-storage-21.0.0/AndroidManifest.xml:30:13-32:85
+192                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+192-->[com.google.firebase:firebase-storage:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/96f5425a9cfb62a58fe990c2547ab217/transformed/jetified-firebase-storage-21.0.0/AndroidManifest.xml:31:17-118
+193                android:value="com.google.firebase.components.ComponentRegistrar" />
+193-->[com.google.firebase:firebase-storage:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/96f5425a9cfb62a58fe990c2547ab217/transformed/jetified-firebase-storage-21.0.0/AndroidManifest.xml:32:17-82
+194            <meta-data
+194-->[com.google.firebase:firebase-storage:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/96f5425a9cfb62a58fe990c2547ab217/transformed/jetified-firebase-storage-21.0.0/AndroidManifest.xml:33:13-35:85
+195                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+195-->[com.google.firebase:firebase-storage:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/96f5425a9cfb62a58fe990c2547ab217/transformed/jetified-firebase-storage-21.0.0/AndroidManifest.xml:34:17-107
+196                android:value="com.google.firebase.components.ComponentRegistrar" />
+196-->[com.google.firebase:firebase-storage:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/96f5425a9cfb62a58fe990c2547ab217/transformed/jetified-firebase-storage-21.0.0/AndroidManifest.xml:35:17-82
+197            <meta-data
+197-->[com.google.firebase:firebase-config:22.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4b85dc2d70b75bde85d04c08ba5b080a/transformed/jetified-firebase-config-22.0.0/AndroidManifest.xml:29:13-31:85
+198                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+198-->[com.google.firebase:firebase-config:22.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4b85dc2d70b75bde85d04c08ba5b080a/transformed/jetified-firebase-config-22.0.0/AndroidManifest.xml:30:17-128
+199                android:value="com.google.firebase.components.ComponentRegistrar" />
+199-->[com.google.firebase:firebase-config:22.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4b85dc2d70b75bde85d04c08ba5b080a/transformed/jetified-firebase-config-22.0.0/AndroidManifest.xml:31:17-82
+200            <meta-data
+200-->[com.google.firebase:firebase-config:22.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4b85dc2d70b75bde85d04c08ba5b080a/transformed/jetified-firebase-config-22.0.0/AndroidManifest.xml:32:13-34:85
+201                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+201-->[com.google.firebase:firebase-config:22.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4b85dc2d70b75bde85d04c08ba5b080a/transformed/jetified-firebase-config-22.0.0/AndroidManifest.xml:33:17-117
+202                android:value="com.google.firebase.components.ComponentRegistrar" />
+202-->[com.google.firebase:firebase-config:22.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4b85dc2d70b75bde85d04c08ba5b080a/transformed/jetified-firebase-config-22.0.0/AndroidManifest.xml:34:17-82
+203            <meta-data
+203-->[com.google.firebase:firebase-sessions:2.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4decc12c22a725f8a82452c432c8ca60/transformed/jetified-firebase-sessions-2.0.0/AndroidManifest.xml:29:13-31:85
+204                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+204-->[com.google.firebase:firebase-sessions:2.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4decc12c22a725f8a82452c432c8ca60/transformed/jetified-firebase-sessions-2.0.0/AndroidManifest.xml:30:17-117
+205                android:value="com.google.firebase.components.ComponentRegistrar" />
+205-->[com.google.firebase:firebase-sessions:2.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4decc12c22a725f8a82452c432c8ca60/transformed/jetified-firebase-sessions-2.0.0/AndroidManifest.xml:31:17-82
+206            <meta-data
+206-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:37:13-39:85
+207                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+207-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:38:17-139
+208                android:value="com.google.firebase.components.ComponentRegistrar" />
+208-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:39:17-82
+209            <meta-data
+209-->[com.google.firebase:firebase-installations:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ce8083f66e5e610ef94820d9e5e22623/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:15:13-17:85
+210                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+210-->[com.google.firebase:firebase-installations:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ce8083f66e5e610ef94820d9e5e22623/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:16:17-130
+211                android:value="com.google.firebase.components.ComponentRegistrar" />
+211-->[com.google.firebase:firebase-installations:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ce8083f66e5e610ef94820d9e5e22623/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:17:17-82
+212            <meta-data
+212-->[com.google.firebase:firebase-installations:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ce8083f66e5e610ef94820d9e5e22623/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:18:13-20:85
+213                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+213-->[com.google.firebase:firebase-installations:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ce8083f66e5e610ef94820d9e5e22623/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:19:17-127
+214                android:value="com.google.firebase.components.ComponentRegistrar" />
+214-->[com.google.firebase:firebase-installations:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ce8083f66e5e610ef94820d9e5e22623/transformed/jetified-firebase-installations-18.0.0/AndroidManifest.xml:20:17-82
+215            <meta-data
+215-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/dd3f35c6b0f7719a05eee8ce0009081c/transformed/jetified-firebase-appcheck-18.0.0/AndroidManifest.xml:25:13-27:85
+216                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+216-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/dd3f35c6b0f7719a05eee8ce0009081c/transformed/jetified-firebase-appcheck-18.0.0/AndroidManifest.xml:26:17-120
+217                android:value="com.google.firebase.components.ComponentRegistrar" />
+217-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/dd3f35c6b0f7719a05eee8ce0009081c/transformed/jetified-firebase-appcheck-18.0.0/AndroidManifest.xml:27:17-82
+218            <meta-data
+218-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/dd3f35c6b0f7719a05eee8ce0009081c/transformed/jetified-firebase-appcheck-18.0.0/AndroidManifest.xml:28:13-30:85
+219                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+219-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/dd3f35c6b0f7719a05eee8ce0009081c/transformed/jetified-firebase-appcheck-18.0.0/AndroidManifest.xml:29:17-117
+220                android:value="com.google.firebase.components.ComponentRegistrar" />
+220-->[com.google.firebase:firebase-appcheck:18.0.0] /Users/frederictheral/.gradle/caches/transforms-3/dd3f35c6b0f7719a05eee8ce0009081c/transformed/jetified-firebase-appcheck-18.0.0/AndroidManifest.xml:30:17-82
+221            <meta-data
+221-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/57f4d382bed34870b9bb82456088890d/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:12:13-14:85
+222                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+222-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/57f4d382bed34870b9bb82456088890d/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:13:17-116
+223                android:value="com.google.firebase.components.ComponentRegistrar" />
+223-->[com.google.firebase:firebase-common-ktx:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/57f4d382bed34870b9bb82456088890d/transformed/jetified-firebase-common-ktx-21.0.0/AndroidManifest.xml:14:17-82
+224            <meta-data
+224-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:35:13-37:85
+225                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+225-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:36:17-109
+226                android:value="com.google.firebase.components.ComponentRegistrar" />
+226-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:37:17-82
+227            <meta-data
+227-->[com.google.firebase:firebase-abt:21.1.1] /Users/frederictheral/.gradle/caches/transforms-3/e003aaf80e73c98243deca5de8c42a92/transformed/jetified-firebase-abt-21.1.1/AndroidManifest.xml:12:13-14:85
+228                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+228-->[com.google.firebase:firebase-abt:21.1.1] /Users/frederictheral/.gradle/caches/transforms-3/e003aaf80e73c98243deca5de8c42a92/transformed/jetified-firebase-abt-21.1.1/AndroidManifest.xml:13:17-109
+229                android:value="com.google.firebase.components.ComponentRegistrar" />
+229-->[com.google.firebase:firebase-abt:21.1.1] /Users/frederictheral/.gradle/caches/transforms-3/e003aaf80e73c98243deca5de8c42a92/transformed/jetified-firebase-abt-21.1.1/AndroidManifest.xml:14:17-82
+230            <meta-data
+230-->[com.google.firebase:firebase-datatransport:18.2.0] /Users/frederictheral/.gradle/caches/transforms-3/85d42ce5a4213bb593230b2dfac32878/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:25:13-27:85
+231                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+231-->[com.google.firebase:firebase-datatransport:18.2.0] /Users/frederictheral/.gradle/caches/transforms-3/85d42ce5a4213bb593230b2dfac32878/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:26:17-115
+232                android:value="com.google.firebase.components.ComponentRegistrar" />
+232-->[com.google.firebase:firebase-datatransport:18.2.0] /Users/frederictheral/.gradle/caches/transforms-3/85d42ce5a4213bb593230b2dfac32878/transformed/jetified-firebase-datatransport-18.2.0/AndroidManifest.xml:27:17-82
+233        </service>
+234        <service
+234-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-19:72
+235            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+235-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-107
+236            android:exported="false"
+236-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+237            android:permission="android.permission.BIND_JOB_SERVICE" />
+237-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-69
+238        <service
+238-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-26:19
+239            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+239-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-97
+240            android:exported="false" >
+240-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-37
+241            <intent-filter>
+241-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
+242                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+242-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
+242-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
+243            </intent-filter>
+244        </service>
+245
+246        <receiver
+246-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35:20
+247            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+247-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-98
+248            android:exported="true"
+248-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-36
+249            android:permission="com.google.android.c2dm.permission.SEND" >
+249-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-73
+250            <intent-filter>
+250-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
+251                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+251-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
+251-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
+252            </intent-filter>
+253        </receiver>
+254
+255        <provider
+255-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:9-47:38
+256            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+256-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-102
+257            android:authorities="com.mycompany.wigswap.flutterfirebasemessaginginitprovider"
+257-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-88
+258            android:exported="false"
+258-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-37
+259            android:initOrder="99" />
+259-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-35
+260        <provider
+260-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-19:20
+261            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+261-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-82
+262            android:authorities="com.mycompany.wigswap.flutter.image_provider"
+262-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-74
+263            android:exported="false"
+263-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-37
+264            android:grantUriPermissions="true" >
+264-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-47
+265            <meta-data
+265-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-18:75
+266                android:name="android.support.FILE_PROVIDER_PATHS"
+266-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-67
+267                android:resource="@xml/flutter_image_picker_file_paths" />
+267-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:18:17-72
+268        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+269        <service
+269-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:21:9-33:19
+270            android:name="com.google.android.gms.metadata.ModuleDependencies"
+270-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-78
+271            android:enabled="false"
+271-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-36
+272            android:exported="false" >
+272-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-37
+273            <intent-filter>
+273-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-28:29
+274                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+274-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-94
+274-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-91
+275            </intent-filter>
+276
+277            <meta-data
+277-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-32:36
+278                android:name="photopicker_activity:0:required"
+278-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-63
+279                android:value="" />
+279-->[:image_picker_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:32:17-33
+280        </service>
+281
+282        <activity
+282-->[:url_launcher_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+283            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+283-->[:url_launcher_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+284            android:exported="false"
+284-->[:url_launcher_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+285            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+285-->[:url_launcher_android] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+286        <activity
+286-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:29:9-46:20
+287            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+287-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:30:13-80
+288            android:excludeFromRecents="true"
+288-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:31:13-46
+289            android:exported="true"
+289-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:32:13-36
+290            android:launchMode="singleTask"
+290-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:33:13-44
+291            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+291-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:34:13-72
+292            <intent-filter>
+292-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:35:13-45:29
+293                <action android:name="android.intent.action.VIEW" />
+293-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:17-69
+293-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:25-66
+294
+295                <category android:name="android.intent.category.DEFAULT" />
+295-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:17-76
+295-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:27-73
+296                <category android:name="android.intent.category.BROWSABLE" />
+296-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:17-78
+296-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:27-75
+297
+298                <data
+298-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+299                    android:host="firebase.auth"
+299-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+300                    android:path="/"
+301                    android:scheme="genericidp" />
+301-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+302            </intent-filter>
+303        </activity>
+304        <activity
+304-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:47:9-64:20
+305            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+305-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:48:13-79
+306            android:excludeFromRecents="true"
+306-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:49:13-46
+307            android:exported="true"
+307-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:50:13-36
+308            android:launchMode="singleTask"
+308-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:51:13-44
+309            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+309-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:52:13-72
+310            <intent-filter>
+310-->[com.google.firebase:firebase-auth:23.0.0] /Users/frederictheral/.gradle/caches/transforms-3/ca5aa704a1974bcdba5155201fc09918/transformed/jetified-firebase-auth-23.0.0/AndroidManifest.xml:53:13-63:29
+311                <action android:name="android.intent.action.VIEW" />
+311-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:17-69
+311-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:25-66
+312
+313                <category android:name="android.intent.category.DEFAULT" />
+313-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:17-76
+313-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:27-73
+314                <category android:name="android.intent.category.BROWSABLE" />
+314-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:17-78
+314-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:27-75
+315
+316                <data
+316-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+317                    android:host="firebase.auth"
+317-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+318                    android:path="/"
+319                    android:scheme="recaptcha" />
+319-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+320            </intent-filter>
+321        </activity>
+322
+323        <service
+323-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:24:9-32:19
+324            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+324-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:25:13-94
+325            android:enabled="true"
+325-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:26:13-35
+326            android:exported="false" >
+326-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:27:13-37
+327            <meta-data
+327-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:29:13-31:104
+328                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+328-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:30:17-76
+329                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+329-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:31:17-101
+330        </service>
+331
+332        <activity
+332-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:34:9-41:20
+333            android:name="androidx.credentials.playservices.HiddenActivity"
+333-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:35:13-76
+334            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+334-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:36:13-87
+335            android:enabled="true"
+335-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:37:13-35
+336            android:exported="false"
+336-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:38:13-37
+337            android:fitsSystemWindows="true"
+337-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:39:13-45
+338            android:theme="@style/Theme.Hidden" >
+338-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] /Users/frederictheral/.gradle/caches/transforms-3/2295e3dc7540ec5e401071112e83d5f4/transformed/jetified-credentials-play-services-auth-1.2.0-rc01/AndroidManifest.xml:40:13-48
+339        </activity>
+340        <activity
+340-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:23:9-27:75
+341            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+341-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:24:13-93
+342            android:excludeFromRecents="true"
+342-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:25:13-46
+343            android:exported="false"
+343-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:26:13-37
+344            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+344-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:27:13-72
+345        <!--
+346            Service handling Google Sign-In user revocation. For apps that do not integrate with
+347            Google Sign-In, this service will never be started.
+348        -->
+349        <service
+349-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:33:9-37:51
+350            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+350-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:34:13-89
+351            android:exported="true"
+351-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:35:13-36
+352            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+352-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:36:13-107
+353            android:visibleToInstantApps="true" />
+353-->[com.google.android.gms:play-services-auth:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/2861caffe3656a8d39d35b6f4bec3cca/transformed/jetified-play-services-auth-21.0.0/AndroidManifest.xml:37:13-48
+354
+355        <activity
+355-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:21:9-65:20
+356            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+356-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:22:13-109
+357            android:exported="true"
+357-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:23:13-36
+358            android:launchMode="singleTask" >
+358-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:24:13-44
+359            <intent-filter>
+359-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:25:13-64:29
+360                <action android:name="android.intent.action.VIEW" />
+360-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:17-69
+360-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:25-66
+361
+362                <category android:name="android.intent.category.DEFAULT" />
+362-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:17-76
+362-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:27-73
+363                <category android:name="android.intent.category.BROWSABLE" />
+363-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:17-78
+363-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:27-75
+364
+365                <!-- Returning from app2app: return_url is triggered to reopen web AuthFlow and poll accounts. -->
+366                <data
+366-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+367                    android:host="link-accounts"
+367-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+368                    android:pathPrefix="/com.mycompany.wigswap/authentication_return"
+369                    android:scheme="stripe-auth" />
+369-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+370
+371                <!-- Returning from app2app: return_url is triggered to reopen native AuthFlow and poll accounts. -->
+372                <data
+372-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+373                    android:host="link-native-accounts"
+373-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+374                    android:pathPrefix="/com.mycompany.wigswap/authentication_return"
+375                    android:scheme="stripe-auth" />
+375-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+376
+377                <!-- End of web AuthFlow success and cancel URIs that begin with "stripe-auth://link-accounts/{app-id}/...” -->
+378                <data
+378-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+379                    android:host="link-accounts"
+379-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+380                    android:path="/com.mycompany.wigswap/success"
+381                    android:scheme="stripe-auth" />
+381-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+382                <data
+382-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+383                    android:host="link-accounts"
+383-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+384                    android:path="/com.mycompany.wigswap/cancel"
+385                    android:scheme="stripe-auth" />
+385-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+386
+387                <!-- Opening app2app: Web flow triggers stripe-auth://native-redirect/{app-id}/http://web-that-redirects-to-native -->
+388                <data
+388-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+389                    android:host="native-redirect"
+389-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+390                    android:pathPrefix="/com.mycompany.wigswap"
+391                    android:scheme="stripe-auth" />
+391-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+392
+393                <!-- Accepts success/cancel/fail URIs that begin with "stripe://auth-redirect” -->
+394                <data
+394-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+395                    android:host="auth-redirect"
+395-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+396                    android:pathPrefix="/com.mycompany.wigswap"
+397                    android:scheme="stripe" />
+397-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+398            </intent-filter>
+399        </activity>
+400        <activity
+400-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:66:9-69:77
+401            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+401-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:67:13-101
+402            android:exported="false"
+402-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:68:13-37
+403            android:theme="@style/StripeFinancialConnectionsDefaultTheme" />
+403-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:69:13-74
+404        <activity
+404-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:70:9-74:58
+405            android:name="com.stripe.android.financialconnections.ui.FinancialConnectionsSheetNativeActivity"
+405-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:71:13-110
+406            android:exported="false"
+406-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:72:13-37
+407            android:theme="@style/StripeFinancialConnectionsDefaultTheme"
+407-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:73:13-74
+408            android:windowSoftInputMode="adjustResize" />
+408-->[com.stripe:financial-connections:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/de3baab1577ce354619900cd5095f272/transformed/jetified-financial-connections-20.48.6/AndroidManifest.xml:74:13-55
+409        <activity
+409-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:8:9-11:69
+410            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+410-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:9:13-80
+411            android:exported="false"
+411-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:10:13-37
+412            android:theme="@style/StripePaymentSheetDefaultTheme" />
+412-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:11:13-66
+413        <activity
+413-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:12:9-15:69
+414            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+414-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:13:13-82
+415            android:exported="false"
+415-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:14:13-37
+416            android:theme="@style/StripePaymentSheetDefaultTheme" />
+416-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:15:13-66
+417        <activity
+417-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:16:9-19:69
+418            android:name="com.stripe.android.customersheet.CustomerSheetActivity"
+418-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:17:13-82
+419            android:exported="false"
+419-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:18:13-37
+420            android:theme="@style/StripePaymentSheetDefaultTheme" />
+420-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:19:13-66
+421        <activity
+421-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:20:9-23:69
+422            android:name="com.stripe.android.paymentsheet.addresselement.AddressElementActivity"
+422-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:21:13-97
+423            android:exported="false"
+423-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:22:13-37
+424            android:theme="@style/StripePaymentSheetDefaultTheme" />
+424-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:23:13-66
+425        <activity
+425-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:24:9-27:69
+426            android:name="com.stripe.android.paymentsheet.paymentdatacollection.bacs.BacsMandateConfirmationActivity"
+426-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:25:13-118
+427            android:exported="false"
+427-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:26:13-37
+428            android:theme="@style/StripePaymentSheetDefaultTheme" />
+428-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:27:13-66
+429        <activity
+429-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:28:9-31:69
+430            android:name="com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity"
+430-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:29:13-105
+431            android:exported="false"
+431-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:30:13-37
+432            android:theme="@style/StripePaymentSheetDefaultTheme" />
+432-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:31:13-66
+433        <activity
+433-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:32:9-35:69
+434            android:name="com.stripe.android.paymentsheet.ui.SepaMandateActivity"
+434-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:33:13-82
+435            android:exported="false"
+435-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:34:13-37
+436            android:theme="@style/StripePaymentSheetDefaultTheme" />
+436-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:35:13-66
+437        <activity
+437-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:36:9-39:68
+438            android:name="com.stripe.android.paymentsheet.ExternalPaymentMethodProxyActivity"
+438-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:37:13-94
+439            android:exported="false"
+439-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:38:13-37
+440            android:theme="@style/StripePayLauncherDefaultTheme" />
+440-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:39:13-65
+441        <activity
+441-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:40:9-42:69
+442            android:name="com.stripe.android.paymentsheet.paymentdatacollection.cvcrecollection.CvcRecollectionActivity"
+442-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:41:13-121
+443            android:theme="@style/StripePaymentSheetDefaultTheme" />
+443-->[com.stripe:paymentsheet:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/76d5304f58278cb4e266b94c0ac4dc82/transformed/jetified-paymentsheet-20.48.6/AndroidManifest.xml:42:13-66
+444        <activity
+444-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:8:9-13:61
+445            android:name="com.stripe.android.link.LinkForegroundActivity"
+445-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:9:13-74
+446            android:autoRemoveFromRecents="true"
+446-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:10:13-49
+447            android:configChanges="orientation|keyboard|keyboardHidden|screenLayout|screenSize|smallestScreenSize"
+447-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:11:13-115
+448            android:launchMode="singleTop"
+448-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:12:13-43
+449            android:theme="@style/StripeTransparentTheme" />
+449-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:13:13-58
+450        <activity
+450-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:14:9-31:20
+451            android:name="com.stripe.android.link.LinkRedirectHandlerActivity"
+451-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:15:13-79
+452            android:autoRemoveFromRecents="true"
+452-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:16:13-49
+453            android:exported="true"
+453-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:17:13-36
+454            android:launchMode="singleInstance"
+454-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:18:13-48
+455            android:theme="@style/StripeTransparentTheme" >
+455-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:19:13-58
+456            <intent-filter>
+456-->[com.stripe:link:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/5e86f089b252c29621a2d89c80423aeb/transformed/jetified-link-20.48.6/AndroidManifest.xml:20:13-30:29
+457                <action android:name="android.intent.action.VIEW" />
+457-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:17-69
+457-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:25-66
+458
+459                <category android:name="android.intent.category.DEFAULT" />
+459-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:17-76
+459-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:27-73
+460                <category android:name="android.intent.category.BROWSABLE" />
+460-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:17-78
+460-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:27-75
+461
+462                <data
+462-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+463                    android:host="complete"
+463-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+464                    android:path="/com.mycompany.wigswap"
+465                    android:scheme="link-popup" />
+465-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+466            </intent-filter>
+467        </activity>
+468        <activity
+468-->[com.stripe:payments-ui-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/a4a2d7b059771b9bff02418dda263959/transformed/jetified-payments-ui-core-20.48.6/AndroidManifest.xml:8:9-11:69
+469            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+469-->[com.stripe:payments-ui-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/a4a2d7b059771b9bff02418dda263959/transformed/jetified-payments-ui-core-20.48.6/AndroidManifest.xml:9:13-80
+470            android:exported="false"
+470-->[com.stripe:payments-ui-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/a4a2d7b059771b9bff02418dda263959/transformed/jetified-payments-ui-core-20.48.6/AndroidManifest.xml:10:13-37
+471            android:theme="@style/StripePaymentSheetDefaultTheme" />
+471-->[com.stripe:payments-ui-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/a4a2d7b059771b9bff02418dda263959/transformed/jetified-payments-ui-core-20.48.6/AndroidManifest.xml:11:13-66
+472        <activity
+472-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:15:9-18:57
+473            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+473-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:16:13-76
+474            android:exported="false"
+474-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:17:13-37
+475            android:theme="@style/StripeDefaultTheme" />
+475-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:18:13-54
+476        <activity
+476-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:19:9-22:57
+477            android:name="com.stripe.android.view.PaymentMethodsActivity"
+477-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:20:13-74
+478            android:exported="false"
+478-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:21:13-37
+479            android:theme="@style/StripeDefaultTheme" />
+479-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:22:13-54
+480        <activity
+480-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:23:9-26:57
+481            android:name="com.stripe.android.view.PaymentFlowActivity"
+481-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:24:13-71
+482            android:exported="false"
+482-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:25:13-37
+483            android:theme="@style/StripeDefaultTheme" />
+483-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:26:13-54
+484        <activity
+484-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:27:9-30:57
+485            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+485-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:28:13-78
+486            android:exported="false"
+486-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:29:13-37
+487            android:theme="@style/StripeDefaultTheme" />
+487-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:30:13-54
+488        <activity
+488-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:31:9-34:61
+489            android:name="com.stripe.android.view.PaymentRelayActivity"
+489-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:32:13-72
+490            android:exported="false"
+490-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:33:13-37
+491            android:theme="@style/StripeTransparentTheme" />
+491-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:34:13-58
+492        <!--
+493        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+494        launched the browser Activity will also handle the return URL deep link.
+495        -->
+496        <activity
+496-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:40:9-44:61
+497            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+497-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:41:13-85
+498            android:exported="false"
+498-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:42:13-37
+499            android:launchMode="singleTask"
+499-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:43:13-44
+500            android:theme="@style/StripeTransparentTheme" />
+500-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:44:13-58
+501        <activity
+501-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:45:9-62:20
+502            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+502-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:46:13-88
+503            android:exported="true"
+503-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:47:13-36
+504            android:launchMode="singleTask"
+504-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:48:13-44
+505            android:theme="@style/StripeTransparentTheme" >
+505-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:49:13-58
+506            <intent-filter>
+506-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:50:13-61:29
+507                <action android:name="android.intent.action.VIEW" />
+507-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:17-69
+507-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:53:25-66
+508
+509                <category android:name="android.intent.category.DEFAULT" />
+509-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:17-76
+509-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:54:27-73
+510                <category android:name="android.intent.category.BROWSABLE" />
+510-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:17-78
+510-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:55:27-75
+511
+512                <!-- Must match `DefaultReturnUrl#value`. -->
+513                <data
+513-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:17-77
+514                    android:host="payment_return_url"
+514-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:48-74
+515                    android:path="/com.mycompany.wigswap"
+516                    android:scheme="stripesdk" />
+516-->/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/android/app/src/main/AndroidManifest.xml:56:23-47
+517            </intent-filter>
+518        </activity>
+519        <activity
+519-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:63:9-66:57
+520            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+520-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:64:13-114
+521            android:exported="false"
+521-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:65:13-37
+522            android:theme="@style/StripeDefaultTheme" />
+522-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:66:13-54
+523        <activity
+523-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:67:9-70:66
+524            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+524-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:68:13-90
+525            android:exported="false"
+525-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:69:13-37
+526            android:theme="@style/StripeGooglePayDefaultTheme" />
+526-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:70:13-63
+527        <activity
+527-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:71:9-74:66
+528            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+528-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:72:13-103
+529            android:exported="false"
+529-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:73:13-37
+530            android:theme="@style/StripeGooglePayDefaultTheme" />
+530-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:74:13-63
+531        <activity
+531-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:75:9-78:68
+532            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+532-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:76:13-107
+533            android:exported="false"
+533-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:77:13-37
+534            android:theme="@style/StripePayLauncherDefaultTheme" />
+534-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:78:13-65
+535        <activity
+535-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:79:9-82:61
+536            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+536-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:80:13-97
+537            android:exported="false"
+537-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:81:13-37
+538            android:theme="@style/StripeTransparentTheme" />
+538-->[com.stripe:payments-core:20.48.6] /Users/frederictheral/.gradle/caches/transforms-3/113cd832e2f8e05e29378697455acf8f/transformed/jetified-payments-core-20.48.6/AndroidManifest.xml:82:13-58
+539        <activity
+539-->[com.stripe:stripe-3ds2-android:6.1.8] /Users/frederictheral/.gradle/caches/transforms-3/2f41e653bade10c91c3ca4fae9586d2a/transformed/jetified-stripe-3ds2-android-6.1.8/AndroidManifest.xml:8:9-11:54
+540            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+540-->[com.stripe:stripe-3ds2-android:6.1.8] /Users/frederictheral/.gradle/caches/transforms-3/2f41e653bade10c91c3ca4fae9586d2a/transformed/jetified-stripe-3ds2-android-6.1.8/AndroidManifest.xml:9:13-81
+541            android:exported="false"
+541-->[com.stripe:stripe-3ds2-android:6.1.8] /Users/frederictheral/.gradle/caches/transforms-3/2f41e653bade10c91c3ca4fae9586d2a/transformed/jetified-stripe-3ds2-android-6.1.8/AndroidManifest.xml:10:13-37
+542            android:theme="@style/Stripe3DS2Theme" />
+542-->[com.stripe:stripe-3ds2-android:6.1.8] /Users/frederictheral/.gradle/caches/transforms-3/2f41e653bade10c91c3ca4fae9586d2a/transformed/jetified-stripe-3ds2-android-6.1.8/AndroidManifest.xml:11:13-51
+543
+544        <receiver
+544-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:29:9-33:20
+545            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+545-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:30:13-85
+546            android:enabled="true"
+546-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:31:13-35
+547            android:exported="false" >
+547-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:32:13-37
+548        </receiver>
+549
+550        <service
+550-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:35:9-38:40
+551            android:name="com.google.android.gms.measurement.AppMeasurementService"
+551-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:36:13-84
+552            android:enabled="true"
+552-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:37:13-35
+553            android:exported="false" />
+553-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:38:13-37
+554        <service
+554-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:39:9-43:72
+555            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+555-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:40:13-87
+556            android:enabled="true"
+556-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:41:13-35
+557            android:exported="false"
+557-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:42:13-37
+558            android:permission="android.permission.BIND_JOB_SERVICE" />
+558-->[com.google.android.gms:play-services-measurement:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/68d41f8941be4a33bc908b9b96f62e99/transformed/jetified-play-services-measurement-22.1.0/AndroidManifest.xml:43:13-69
+559
+560        <receiver
+560-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:29:9-40:20
+561            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+561-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:30:13-78
+562            android:exported="true"
+562-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:31:13-36
+563            android:permission="com.google.android.c2dm.permission.SEND" >
+563-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:32:13-73
+564            <intent-filter>
+564-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
+565                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+565-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
+565-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
+566            </intent-filter>
+567
+568            <meta-data
+568-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:37:13-39:40
+569                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+569-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:38:17-92
+570                android:value="true" />
+570-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:39:17-37
+571        </receiver>
+572        <!--
+573             FirebaseMessagingService performs security checks at runtime,
+574             but set to not exported to explicitly avoid allowing another app to call it.
+575        -->
+576        <service
+576-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:46:9-53:19
+577            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+577-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:47:13-82
+578            android:directBootAware="true"
+578-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:48:13-43
+579            android:exported="false" >
+579-->[com.google.firebase:firebase-messaging:24.0.1] /Users/frederictheral/.gradle/caches/transforms-3/4d3019c9e4ff5f595edb44802c7b3388/transformed/jetified-firebase-messaging-24.0.1/AndroidManifest.xml:49:13-37
+580            <intent-filter android:priority="-500" >
+580-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
+581                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+581-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
+581-->[:firebase_messaging] /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
+582            </intent-filter>
+583        </service>
+584
+585        <provider
+585-->[androidx.emoji2:emoji2:1.4.0] /Users/frederictheral/.gradle/caches/transforms-3/83be2c58497b4c0f5dc7005b3aa46d04/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+586            android:name="androidx.startup.InitializationProvider"
+586-->[androidx.emoji2:emoji2:1.4.0] /Users/frederictheral/.gradle/caches/transforms-3/83be2c58497b4c0f5dc7005b3aa46d04/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:25:13-67
+587            android:authorities="com.mycompany.wigswap.androidx-startup"
+587-->[androidx.emoji2:emoji2:1.4.0] /Users/frederictheral/.gradle/caches/transforms-3/83be2c58497b4c0f5dc7005b3aa46d04/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:26:13-68
+588            android:exported="false" >
+588-->[androidx.emoji2:emoji2:1.4.0] /Users/frederictheral/.gradle/caches/transforms-3/83be2c58497b4c0f5dc7005b3aa46d04/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:27:13-37
+589            <meta-data
+589-->[androidx.emoji2:emoji2:1.4.0] /Users/frederictheral/.gradle/caches/transforms-3/83be2c58497b4c0f5dc7005b3aa46d04/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+590                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+590-->[androidx.emoji2:emoji2:1.4.0] /Users/frederictheral/.gradle/caches/transforms-3/83be2c58497b4c0f5dc7005b3aa46d04/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:30:17-75
+591                android:value="androidx.startup" />
+591-->[androidx.emoji2:emoji2:1.4.0] /Users/frederictheral/.gradle/caches/transforms-3/83be2c58497b4c0f5dc7005b3aa46d04/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:31:17-49
+592            <meta-data
+592-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/frederictheral/.gradle/caches/transforms-3/99cc5466ff3643c225b1ede36f9fd8d0/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+593                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+593-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/frederictheral/.gradle/caches/transforms-3/99cc5466ff3643c225b1ede36f9fd8d0/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+594                android:value="androidx.startup" />
+594-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/frederictheral/.gradle/caches/transforms-3/99cc5466ff3643c225b1ede36f9fd8d0/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+595            <meta-data
+595-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+596                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+596-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+597                android:value="androidx.startup" />
+597-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+598        </provider>
+599
+600        <service
+600-->[com.google.firebase:firebase-sessions:2.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4decc12c22a725f8a82452c432c8ca60/transformed/jetified-firebase-sessions-2.0.0/AndroidManifest.xml:22:9-25:40
+601            android:name="com.google.firebase.sessions.SessionLifecycleService"
+601-->[com.google.firebase:firebase-sessions:2.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4decc12c22a725f8a82452c432c8ca60/transformed/jetified-firebase-sessions-2.0.0/AndroidManifest.xml:23:13-80
+602            android:enabled="true"
+602-->[com.google.firebase:firebase-sessions:2.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4decc12c22a725f8a82452c432c8ca60/transformed/jetified-firebase-sessions-2.0.0/AndroidManifest.xml:24:13-35
+603            android:exported="false" />
+603-->[com.google.firebase:firebase-sessions:2.0.0] /Users/frederictheral/.gradle/caches/transforms-3/4decc12c22a725f8a82452c432c8ca60/transformed/jetified-firebase-sessions-2.0.0/AndroidManifest.xml:25:13-37
+604
+605        <property
+605-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:30:9-32:61
+606            android:name="android.adservices.AD_SERVICES_CONFIG"
+606-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:31:13-65
+607            android:resource="@xml/ga_ad_services_config" />
+607-->[com.google.android.gms:play-services-measurement-api:22.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9800a662e7abac4413f20ac4dddb1562/transformed/jetified-play-services-measurement-api-22.1.0/AndroidManifest.xml:32:13-58
+608
+609        <provider
+609-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:23:9-28:39
+610            android:name="com.google.firebase.provider.FirebaseInitProvider"
+610-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:24:13-77
+611            android:authorities="com.mycompany.wigswap.firebaseinitprovider"
+611-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:25:13-72
+612            android:directBootAware="true"
+612-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:26:13-43
+613            android:exported="false"
+613-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:27:13-37
+614            android:initOrder="100" />
+614-->[com.google.firebase:firebase-common:21.0.0] /Users/frederictheral/.gradle/caches/transforms-3/27467155defcef0b42f13a9aa83a2e61/transformed/jetified-firebase-common-21.0.0/AndroidManifest.xml:28:13-36
+615
+616        <uses-library
+616-->[androidx.window:window:1.2.0] /Users/frederictheral/.gradle/caches/transforms-3/a82b715a6dc7b9a7173e15dc3049d4cd/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+617            android:name="androidx.window.extensions"
+617-->[androidx.window:window:1.2.0] /Users/frederictheral/.gradle/caches/transforms-3/a82b715a6dc7b9a7173e15dc3049d4cd/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+618            android:required="false" />
+618-->[androidx.window:window:1.2.0] /Users/frederictheral/.gradle/caches/transforms-3/a82b715a6dc7b9a7173e15dc3049d4cd/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+619        <uses-library
+619-->[androidx.window:window:1.2.0] /Users/frederictheral/.gradle/caches/transforms-3/a82b715a6dc7b9a7173e15dc3049d4cd/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+620            android:name="androidx.window.sidecar"
+620-->[androidx.window:window:1.2.0] /Users/frederictheral/.gradle/caches/transforms-3/a82b715a6dc7b9a7173e15dc3049d4cd/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+621            android:required="false" />
+621-->[androidx.window:window:1.2.0] /Users/frederictheral/.gradle/caches/transforms-3/a82b715a6dc7b9a7173e15dc3049d4cd/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+622        <uses-library
+622-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/frederictheral/.gradle/caches/transforms-3/06ba10f3733f262911a532f3e8720b1f/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:23:9-25:40
+623            android:name="android.ext.adservices"
+623-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/frederictheral/.gradle/caches/transforms-3/06ba10f3733f262911a532f3e8720b1f/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:24:13-50
+624            android:required="false" /> <!-- Needs to be explicitly declared on P+ -->
+624-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/frederictheral/.gradle/caches/transforms-3/06ba10f3733f262911a532f3e8720b1f/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:25:13-37
+625        <uses-library
+625-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
+626            android:name="org.apache.http.legacy"
+626-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+627            android:required="false" />
+627-->[com.google.android.gms:play-services-maps:18.0.2] /Users/frederictheral/.gradle/caches/transforms-3/00395d7f6c61cc854c03b7b2330fa32c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
+628
+629        <activity
+629-->[com.google.android.gms:play-services-base:18.3.0] /Users/frederictheral/.gradle/caches/transforms-3/a43691761a622881538cdada9269ee37/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:9-22:45
+630            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+630-->[com.google.android.gms:play-services-base:18.3.0] /Users/frederictheral/.gradle/caches/transforms-3/a43691761a622881538cdada9269ee37/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:19-85
+631            android:exported="false"
+631-->[com.google.android.gms:play-services-base:18.3.0] /Users/frederictheral/.gradle/caches/transforms-3/a43691761a622881538cdada9269ee37/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:22:19-43
+632            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+632-->[com.google.android.gms:play-services-base:18.3.0] /Users/frederictheral/.gradle/caches/transforms-3/a43691761a622881538cdada9269ee37/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:21:19-78
+633
+634        <meta-data
+634-->[com.google.android.gms:play-services-basement:18.4.0] /Users/frederictheral/.gradle/caches/transforms-3/6c15e1acc36c2ede4dcdecfdd30404d9/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:9-122
+635            android:name="com.google.android.gms.version"
+635-->[com.google.android.gms:play-services-basement:18.4.0] /Users/frederictheral/.gradle/caches/transforms-3/6c15e1acc36c2ede4dcdecfdd30404d9/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:20-65
+636            android:value="@integer/google_play_services_version" />
+636-->[com.google.android.gms:play-services-basement:18.4.0] /Users/frederictheral/.gradle/caches/transforms-3/6c15e1acc36c2ede4dcdecfdd30404d9/transformed/jetified-play-services-basement-18.4.0/AndroidManifest.xml:6:66-119
+637
+638        <receiver
+638-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+639            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+639-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+640            android:directBootAware="false"
+640-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+641            android:enabled="true"
+641-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+642            android:exported="true"
+642-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+643            android:permission="android.permission.DUMP" >
+643-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+644            <intent-filter>
+644-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+645                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+645-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+645-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+646            </intent-filter>
+647            <intent-filter>
+647-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+648                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+648-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+648-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+649            </intent-filter>
+650            <intent-filter>
+650-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+651                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+651-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+651-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+652            </intent-filter>
+653            <intent-filter>
+653-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+654                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+654-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+654-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/frederictheral/.gradle/caches/transforms-3/a3136382d4419f60d535b7fff4cd731c/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+655            </intent-filter>
+656        </receiver>
+657
+658        <service
+658-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/3677f7f83c077fa0f7d717ccfc1af0e2/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+659            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+659-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/3677f7f83c077fa0f7d717ccfc1af0e2/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+660            android:exported="false" >
+660-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/3677f7f83c077fa0f7d717ccfc1af0e2/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+661            <meta-data
+661-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/3677f7f83c077fa0f7d717ccfc1af0e2/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+662                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+662-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/3677f7f83c077fa0f7d717ccfc1af0e2/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+663                android:value="cct" />
+663-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/3677f7f83c077fa0f7d717ccfc1af0e2/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+664        </service>
+665        <service
+665-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/40ab35ff5a0382c99acdc3643be72f5e/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+666            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+666-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/40ab35ff5a0382c99acdc3643be72f5e/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+667            android:exported="false"
+667-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/40ab35ff5a0382c99acdc3643be72f5e/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+668            android:permission="android.permission.BIND_JOB_SERVICE" >
+668-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/40ab35ff5a0382c99acdc3643be72f5e/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+669        </service>
+670
+671        <receiver
+671-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/40ab35ff5a0382c99acdc3643be72f5e/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+672            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+672-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/40ab35ff5a0382c99acdc3643be72f5e/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+673            android:exported="false" />
+673-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/frederictheral/.gradle/caches/transforms-3/40ab35ff5a0382c99acdc3643be72f5e/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+674
+675        <meta-data
+675-->[com.google.android.instantapps:instantapps:1.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9b59958aa956563def93e4756dff729e/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:10:9-12:33
+676            android:name="aia-compat-api-min-version"
+676-->[com.google.android.instantapps:instantapps:1.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9b59958aa956563def93e4756dff729e/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:11:13-54
+677            android:value="1" />
+677-->[com.google.android.instantapps:instantapps:1.1.0] /Users/frederictheral/.gradle/caches/transforms-3/9b59958aa956563def93e4756dff729e/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:12:13-30
+678    </application>
+679
+680</manifest>

@@ -345,7 +345,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/Publication/PlayStore/DownLoad%20Code/wig_swap/test/flutter/packages/flutter",
+      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -375,7 +375,7 @@
     },
     {
       "name": "flutter_localizations",
-      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/Publication/PlayStore/DownLoad%20Code/wig_swap/test/flutter/packages/flutter_localizations",
+      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/flutter/packages/flutter_localizations",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -411,13 +411,13 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/Publication/PlayStore/DownLoad%20Code/wig_swap/test/flutter/packages/flutter_test",
+      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/Publication/PlayStore/DownLoad%20Code/wig_swap/test/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -867,7 +867,7 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/Publication/PlayStore/DownLoad%20Code/wig_swap/test/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/frederictheral/Dropbox/FlutterFlow/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
@@ -1130,10 +1130,10 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-10-23T16:11:06.465885Z",
+  "generated": "2024-10-24T16:51:37.164918Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
-  "flutterRoot": "file:///Users/frederictheral/Dropbox/FlutterFlow/Publication/PlayStore/DownLoad%20Code/wig_swap/test/flutter",
+  "flutterRoot": "file:///Users/frederictheral/Dropbox/FlutterFlow/flutter",
   "flutterVersion": "3.24.3",
   "pubCache": "file:///Users/frederictheral/.pub-cache"
 }

@@ -1,4 +1,4 @@
-#Tue Oct 22 21:36:05 CEST 2024
+#Wed Oct 23 20:19:56 CEST 2024
 base.0=/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/app/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/app/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
 base.2=/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/build/app/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex

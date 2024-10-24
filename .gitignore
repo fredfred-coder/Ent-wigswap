@@ -1,3 +1,5 @@
+build/*
+!build/outputs/apk/
 build/
 
 .dart_tool/

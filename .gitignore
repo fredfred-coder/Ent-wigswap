@@ -1,4 +1,8 @@
-build/*
+cat .gitignore
+
+git commit -am "Sauvegarde de la configuration du terminal et exportation Firestore"
+
+git restore --staged Ent-wigswapbuild/*
 !build/outputs/apk/
 build/
 

@@ -10,10 +10,15 @@
 const {onRequest} = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 
-// Create and deploy your first functions
+// Utiliser logger pour enregistrer un message
+logger.info("Fonctions Firebase prêtes pour le déploiement.");
+
+// Créer et déployer votre première fonction
 // https://firebase.google.com/docs/functions/get-started
 
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+// Exemple de fonction utilisant onRequest
+exports.helloWorld = onRequest((request, response) => {
+  logger.info("Requête reçue sur helloWorld");
+  response.send("Hello, world!");
+});
+

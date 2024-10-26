@@ -4,5 +4,9 @@
     "  ": "wigswap-274ff"
   },
   "targets": {},
-  "etags": {}
+  "etags": {
+    "wigswap-274ff": {
+      "extensionInstances": {}
+    }
+  }
 }

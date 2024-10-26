@@ -2,7 +2,7 @@ name: wig_swap
 description: A new Flutter project.
 
 # Prevents the package from being accidentally published to pub.dev.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'  # Remove this line if you wish to publish to pub.dev
 
 # The version and build number for your application.
 version: 1.0.0+1
@@ -26,7 +26,7 @@ dependencies:
   cloud_functions: 5.1.3
   cloud_functions_platform_interface: 5.5.37
   cloud_functions_web: 4.10.2
-  collection: ^1.19.1 # mise à jour
+  collection: ^1.19.1
   csslib: ^1.0.0
   device_info_plus: ^11.1.0
   device_info_plus_platform_interface: 7.0.1
@@ -165,4 +165,3 @@ flutter:
     - assets/rive_animations/
     - assets/pdfs/
     - assets/jsons/
-

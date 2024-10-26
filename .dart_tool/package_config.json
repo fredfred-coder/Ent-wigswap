@@ -1071,7 +1071,7 @@
     },
     {
       "name": "video_player_android",
-      "rootUri": "file:///Users/frederictheral/.pub-cache/hosted/pub.dev/video_player_android-2.7.15",
+      "rootUri": "file:///Users/frederictheral/.pub-cache/hosted/pub.dev/video_player_android-2.7.16",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -1148,10 +1148,10 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-10-24T18:41:37.428258Z",
+  "generated": "2024-10-26T21:00:18.210601Z",
   "generator": "pub",
-  "generatorVersion": "3.5.3",
+  "generatorVersion": "3.5.4",
   "flutterRoot": "file:///Users/frederictheral/Dropbox/FlutterFlow/flutter",
-  "flutterVersion": "3.24.3",
+  "flutterVersion": "3.24.4",
   "pubCache": "file:///Users/frederictheral/.pub-cache"
 }

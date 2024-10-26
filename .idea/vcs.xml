@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Ent-wigswap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ent-wigswap/Ent-wigswap-new" vcs="Git" />
   </component>
 </project>

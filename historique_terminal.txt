@@ -1,0 +1,16 @@
+ 1086  flutter pub get\n
+ 1087  flutter pub outdated\n
+ 1088  flutter pub upgrade\n
+ 1089  flutter pub upgrade\n
+ 1090  flutter pub get\n
+ 1091  flutter pub outdated\n
+ 1092  flutter run\n
+ 1093  flutter run
+ 1094  git add .\n
+ 1095  git add <wigswap>
+ 1096  git commit -m "Mise à jour des dépendances Flutter et correction des erreurs"\n
+ 1097  git push origin <nom_de_la_branche>\n
+ 1098  git push origin <nom_de_la_branche>\n
+ 1099  git push origin <nom_de_la_branche>\n
+ 1100  git push origin main\n
+ 1101  history\n

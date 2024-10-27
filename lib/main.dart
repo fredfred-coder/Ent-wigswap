@@ -89,6 +89,10 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    // Ajout de débogage
+    print('Type de _locale: ${_locale.runtimeType}, Valeur: $_locale');
+    print('Type de _themeMode: ${_themeMode.runtimeType}, Valeur: $_themeMode');
+
     return MaterialApp.router(
       title: 'WigSwap',
       localizationsDelegates: [

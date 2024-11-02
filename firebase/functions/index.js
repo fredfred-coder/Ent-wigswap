@@ -12,6 +12,16 @@ const kPushNotificationRuntimeOpts = {
   memory: "2GB",
 };
 
+// Ajout de Proxy pour résoudre le problème de requêtes non sécurisées
+const { HttpsProxyAgent } = require('https-proxy-agent');
+const proxyUrl = 'http://votre_proxy:port';  // Remplacez par votre proxy réel
+const agent = new HttpsProxyAgent(proxyUrl);
+
+// Configuration de l'agent HTTP sur les requêtes admin
+admin.firestore().settings({
+  httpAgent: agent,
+});
+
 exports.addFcmToken = functions
   .region("europe-west3")
   .https.onCall(async (data, context) => {
@@ -29,7 +39,7 @@ exports.addFcmToken = functions
       fcmToken.length === 0 ||
       deviceType.length === 0
     ) {
-      return "Invalid arguments encoutered when adding FCM token.";
+      return "Invalid arguments encountered when adding FCM token.";
     }
     if (context.auth.uid != userDocPath.split("/")[1]) {
       return "Failed: Authenticated user doesn't match user provided.";
@@ -78,39 +88,6 @@ exports.sendPushNotificationsTrigger = functions
     }
   });
 
-exports.sendScheduledPushNotifications = functions
-  .region("europe-west3")
-  .pubsub.schedule(`every ${kSchedulerIntervalMinutes} minutes synchronized`)
-  .onRun(async (_) => {
-    const minutesToMilliseconds = (minutes) => minutes * 60 * 1000;
-    function currentTimeDownToNearestMinute() {
-      // Add a second to the current time to avoid minute boundary issues.
-      const currentTime = new Date(new Date().getTime() + 1000);
-      // Remove seconds and milliseconds to get the time down to the minute.
-      currentTime.setSeconds(0, 0);
-      return currentTime;
-    }
-
-    // Determine the cutoff times for this round of push notifications.
-    const intervalMs = minutesToMilliseconds(kSchedulerIntervalMinutes);
-    const upperCutoffTime = currentTimeDownToNearestMinute();
-    const lowerCutoffTime = new Date(upperCutoffTime.getTime() - intervalMs);
-    // Send push notifications that we've scheduled.
-    const scheduledNotifications = await firestore
-      .collection(kPushNotificationsCollection)
-      .where("scheduled_time", ">", lowerCutoffTime)
-      .where("scheduled_time", "<=", upperCutoffTime)
-      .get();
-    for (var snapshot of scheduledNotifications.docs) {
-      try {
-        await sendPushNotifications(snapshot);
-      } catch (e) {
-        console.log(`Error: ${e}`);
-        await snapshot.ref.update({ status: "failed", error: `${e}` });
-      }
-    }
-  });
-
 async function sendPushNotifications(snapshot) {
   const notificationData = snapshot.data();
   const title = notificationData.notification_title || "";
@@ -149,25 +126,6 @@ async function sendPushNotifications(snapshot) {
         }
       });
     }
-  } else {
-    var userTokensQuery = firestore.collectionGroup(kFcmTokensCollection);
-    // Handle batched push notifications by splitting tokens up by document
-    // id.
-    if (numBatches > 0) {
-      userTokensQuery = userTokensQuery
-        .orderBy(admin.firestore.FieldPath.documentId())
-        .startAt(getDocIdBound(batchIndex, numBatches))
-        .endBefore(getDocIdBound(batchIndex + 1, numBatches));
-    }
-    const userTokens = await userTokensQuery.get();
-    userTokens.docs.forEach((token) => {
-      const data = token.data();
-      const audienceMatches =
-        targetAudience === "All" || data.device_type === targetAudience;
-      if (audienceMatches && typeof data.fcm_token !== undefined) {
-        tokens.add(data.fcm_token);
-      }
-    });
   }
 
   const tokensArr = Array.from(tokens);
@@ -215,124 +173,3 @@ async function sendPushNotifications(snapshot) {
 function getUserFcmTokensCollection(userDocPath) {
   return firestore.doc(userDocPath).collection(kFcmTokensCollection);
 }
-
-function getDocIdBound(index, numBatches) {
-  if (index <= 0) {
-    return "users/(";
-  }
-  if (index >= numBatches) {
-    return "users/}";
-  }
-  const numUidChars = 62;
-  const twoCharOptions = Math.pow(numUidChars, 2);
-
-  var twoCharIdx = (index * twoCharOptions) / numBatches;
-  var firstCharIdx = Math.floor(twoCharIdx / numUidChars);
-  var secondCharIdx = Math.floor(twoCharIdx % numUidChars);
-  const firstChar = getCharForIndex(firstCharIdx);
-  const secondChar = getCharForIndex(secondCharIdx);
-  return "users/" + firstChar + secondChar;
-}
-
-function getCharForIndex(charIdx) {
-  if (charIdx < 10) {
-    return String.fromCharCode(charIdx + "0".charCodeAt(0));
-  } else if (charIdx < 36) {
-    return String.fromCharCode("A".charCodeAt(0) + charIdx - 10);
-  } else {
-    return String.fromCharCode("a".charCodeAt(0) + charIdx - 36);
-  }
-}
-const stripeModule = require("stripe");
-
-// Credentials
-const kStripeProdSecretKey =
-  "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";
-const kStripeTestSecretKey =
-  "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";
-
-const secretKey = (isProd) =>
-  isProd ? kStripeProdSecretKey : kStripeTestSecretKey;
-
-/**
- *
- */
-exports.initStripePayment = functions
-  .region("europe-west3")
-  .https.onCall(async (data, context) => {
-    if (!context.auth) {
-      return "Unauthenticated calls are not allowed.";
-    }
-    return await initPayment(data, true);
-  });
-
-/**
- *
- */
-exports.initStripeTestPayment = functions
-  .region("europe-west3")
-  .https.onCall(async (data, context) => {
-    if (!context.auth) {
-      return "Unauthenticated calls are not allowed.";
-    }
-    return await initPayment(data, false);
-  });
-
-async function initPayment(data, isProd) {
-  try {
-    const stripe = new stripeModule.Stripe(secretKey(isProd), {
-      apiVersion: "2020-08-27",
-    });
-
-    const customers = await stripe.customers.list({
-      email: data.email,
-      limit: 1,
-    });
-    var customer = customers.data[0];
-    if (!customer) {
-      customer = await stripe.customers.create({
-        email: data.email,
-        ...(data.name && { name: data.name }),
-      });
-    }
-
-    const ephemeralKey = await stripe.ephemeralKeys.create(
-      { customer: customer.id },
-      { apiVersion: "2020-08-27" },
-    );
-    const paymentIntent = await stripe.paymentIntents.create({
-      amount: data.amount,
-      currency: data.currency,
-      customer: customer.id,
-      ...(data.description && { description: data.description }),
-    });
-
-    return {
-      paymentId: paymentIntent.id,
-      paymentIntent: paymentIntent.client_secret,
-      ephemeralKey: ephemeralKey.secret,
-      customer: customer.id,
-      success: true,
-    };
-  } catch (error) {
-    console.log(`Error: ${error}`);
-    return { success: false, error: userFacingMessage(error) };
-  }
-}
-
-/**
- * Sanitize the error message for the user.
- */
-function userFacingMessage(error) {
-  return error.type
-    ? error.message
-    : "An error occurred, developers have been alerted";
-}
-exports.onUserDeleted = functions
-  .region("europe-west3")
-  .auth.user()
-  .onDelete(async (user) => {
-    let firestore = admin.firestore();
-    let userRef = firestore.doc("users/" + user.uid);
-    await firestore.collection("users").doc(user.uid).delete();
-  });

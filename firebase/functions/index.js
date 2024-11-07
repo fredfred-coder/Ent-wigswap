@@ -1,5 +1,9 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const axios = require("axios");
+const { HttpsProxyAgent } = require('https-proxy-agent');
+
+// Initialisation de Firebase Admin
 admin.initializeApp();
 
 const kFcmTokensCollection = "fcm_tokens";
@@ -12,16 +16,36 @@ const kPushNotificationRuntimeOpts = {
   memory: "2GB",
 };
 
-// Ajout de Proxy pour résoudre le problème de requêtes non sécurisées
-const { HttpsProxyAgent } = require('https-proxy-agent');
-const proxyUrl = 'http://votre_proxy:port';  // Remplacez par votre proxy réel
+// Configuration du Proxy pour les requêtes
+const proxyUrl = 'http://votre_proxy:5001'; // Remplacez 'votre_proxy' par l'adresse de votre proxy
 const agent = new HttpsProxyAgent(proxyUrl);
 
-// Configuration de l'agent HTTP sur les requêtes admin
+// Configuration de l'agent HTTP sur les requêtes Firestore
 admin.firestore().settings({
   httpAgent: agent,
 });
 
+// Fonction Proxy pour les Requêtes vers l'API Wave
+exports.proxyWaveRequest = functions.region("europe-west3").https.onRequest(async (req, res) => {
+  try {
+    const response = await axios({
+      method: req.method,
+      url: `https://api.wave.com/${req.url}`, // URL de l'API Wave
+      headers: {
+        Authorization: `Bearer ${functions.config().wave.api_key}`,
+        ...req.headers,
+      },
+      data: req.body,
+      httpAgent: agent, // Utilisation de l'agent de proxy pour cette requête
+    });
+    res.status(response.status).send(response.data);
+  } catch (error) {
+    console.error("Erreur du proxy pour Wave :", error);
+    res.status(error.response ? error.response.status : 500).send(error.message);
+  }
+});
+
+// Fonction pour ajouter un token FCM
 exports.addFcmToken = functions
   .region("europe-west3")
   .https.onCall(async (data, context) => {
@@ -52,7 +76,6 @@ exports.addFcmToken = functions
     for (var doc of existingTokens.docs) {
       const user = doc.ref.parent.parent;
       if (user.path != userDocPath) {
-        // Should never have the same FCM token associated with multiple users.
         await doc.ref.delete();
       } else {
         userAlreadyHasToken = true;
@@ -69,18 +92,17 @@ exports.addFcmToken = functions
     return "Successfully added FCM token!";
   });
 
+// Déclencheur pour envoyer des notifications push
 exports.sendPushNotificationsTrigger = functions
   .region("europe-west3")
   .runWith(kPushNotificationRuntimeOpts)
   .firestore.document(`${kPushNotificationsCollection}/{id}`)
   .onCreate(async (snapshot, _) => {
     try {
-      // Ignore scheduled push notifications on create
       const scheduledTime = snapshot.data().scheduled_time || "";
       if (scheduledTime) {
         return;
       }
-
       await sendPushNotifications(snapshot);
     } catch (e) {
       console.log(`Error: ${e}`);
@@ -162,14 +184,5 @@ async function sendPushNotifications(snapshot) {
   var numSent = 0;
   await Promise.all(
     messageBatches.map(async (messages) => {
-      const response = await admin.messaging().sendEachForMulticast(messages);
-      numSent += response.successCount;
-    }),
-  );
+      const r
 
-  await snapshot.ref.update({ status: "succeeded", num_sent: numSent });
-}
-
-function getUserFcmTokensCollection(userDocPath) {
-  return firestore.doc(userDocPath).collection(kFcmTokensCollection);
-}

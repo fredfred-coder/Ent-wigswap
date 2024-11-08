@@ -1,7 +1,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const axios = require("axios");
-const { HttpsProxyAgent } = require('https-proxy-agent');
 
 // Initialisation de Firebase Admin
 admin.initializeApp();
@@ -16,31 +15,21 @@ const kPushNotificationRuntimeOpts = {
   memory: "2GB",
 };
 
-// Configuration du Proxy pour les requêtes
-const proxyUrl = 'http://votre_proxy:5001'; // Remplacez 'votre_proxy' par l'adresse de votre proxy
-const agent = new HttpsProxyAgent(proxyUrl);
-
-// Configuration de l'agent HTTP sur les requêtes Firestore
-admin.firestore().settings({
-  httpAgent: agent,
-});
-
-// Fonction Proxy pour les Requêtes vers l'API Wave
+// Fonction pour les Requêtes vers l'API Wave
 exports.proxyWaveRequest = functions.region("europe-west3").https.onRequest(async (req, res) => {
   try {
     const response = await axios({
       method: req.method,
-      url: `https://api.wave.com/${req.url}`, // URL de l'API Wave
+      url: `https://api.wave.com/${req.url}`,
       headers: {
         Authorization: `Bearer ${functions.config().wave.api_key}`,
         ...req.headers,
       },
       data: req.body,
-      httpAgent: agent, // Utilisation de l'agent de proxy pour cette requête
     });
     res.status(response.status).send(response.data);
   } catch (error) {
-    console.error("Erreur du proxy pour Wave :", error);
+    console.error("Erreur lors de l'appel à Wave API :", error);
     res.status(error.response ? error.response.status : 500).send(error.message);
   }
 });
@@ -184,5 +173,14 @@ async function sendPushNotifications(snapshot) {
   var numSent = 0;
   await Promise.all(
     messageBatches.map(async (messages) => {
-      const r
+      const response = await admin.messaging().sendEachForMulticast(messages);
+      numSent += response.successCount;
+    })
+  );
 
+  await snapshot.ref.update({ status: "succeeded", num_sent: numSent });
+}
+
+function getUserFcmTokensCollection(userDocPath) {
+  return firestore.doc(userDocPath).collection(kFcmTokensCollection);
+}

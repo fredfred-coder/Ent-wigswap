@@ -1,0 +1,16 @@
+ 1001  cd Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap
+ 1002  code .
+ 1003  git checkout nouvelle-branche\n
+ 1004  cd functions\nnpm install\n
+ 1005  npm install -g npm-check-updates\nncu -u\nnpm install\n
+ 1006  code .
+ 1007  firebase deploy --only functions\n
+ 1008  cd /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/functions\n
+ 1009  touch eslint.config.js\n
+ 1010  firebase deploy --only functions\n
+ 1011  y
+ 1012  firebase deploy --only functions\n
+ 1013  git add .\n
+ 1014  git commit -m "Ajout de la configuration du proxy, suppression des fonctions obsolètes, et déploiement Firebase réussi"\n
+ 1015  git push origin nouvelle-branche\n
+ 1016  history 50\n

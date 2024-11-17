@@ -1,0 +1,16 @@
+  998  git checkout ancienne-config\n
+  999  git checkout nouvelle-branche\n
+ 1000  git log nouvelle-branche\n
+ 1001  git add .\ngit commit -m "Sauvegarde des modifications avant de changer de branche"\n
+ 1002  cd /Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/\n
+ 1003  ls -a\n
+ 1004  git add .\ngit commit -m "Sauvegarde des modifications avant de changer de branche"\n
+ 1005  git checkout nouvelle-branche\n
+ 1006  git status\n
+ 1007  cat .gitignore\n
+ 1008  echo "flutter/" >> .gitignore\n
+ 1009  git status\n
+ 1010  git add .gitignore\n
+ 1011  git commit -m "Mise à jour du fichier .gitignore pour ignorer le dossier flutter"\n
+ 1012  git status\n
+ 1013  git push origin nouvelle-branche\n

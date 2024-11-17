@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "920564303895",
+    "project_id": "wigswap-274ff",
+    "storage_bucket": "wigswap-274ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920564303895:android:136d851eac9c5e41b4b452",
+        "android_client_info": {
+          "package_name": "com.mycompany.wigswap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920564303895-5u6huh8mhm0erfg4la1mr326igpt2ki4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDae4uFiypWoo7VOB1XbOy2Bizk_cvVCG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920564303895-5u6huh8mhm0erfg4la1mr326igpt2ki4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "920564303895-c0pdr90b3v9a99djeiq8iatibvlkq9u4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.wigswap"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

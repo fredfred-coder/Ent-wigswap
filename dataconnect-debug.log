@@ -1,0 +1,14 @@
+I1108 10:11:08.790377   76230 load.go:37] Reloading schema and connectors...
+I1108 10:11:08.806159   76230 control.go:45] [engine.Service /emulator/wigswap 3871] UpdateSchema(): done sources: schema/schema.gql [1384B] 
+I1108 10:11:08.813203   76230 control.go:73] [engine.Service /emulator/wigswap 3871] UpdateConnector(default): done sources: connector/mutations.gql [1163B] connector/queries.gql [1855B] 
+I1108 10:11:08.829736   76230 codegen.go:82] [connector "default" dartSdk] Generating sources into "/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/dataconnect-generated/dart/default_connector"
+I1108 10:11:08.829903   76230 dartgen.go:582] Started Dart code generation for connector default
+I1108 10:11:08.837138   76230 collector.go:107] schema extensions wrote into "/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [61293B] 
+I1108 10:11:08.838073   76230 collector.go:107] connector "default" dartSdk wrote into "/Users/frederictheral/Dropbox/FlutterFlow/Developpement/Code/version_4/wigswap/dataconnect-generated/dart/default_connector"
+Generated sources: default.dart [577B] 
+I1108 10:11:08.838236   76230 load.go:115] Finished reloading
+I1108 10:11:08.842619   76230 dev.go:95] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I1108 10:11:08.843585   76230 dev.go:95] Listening on address (HTTP + gRPC): [::1]:9399
+I1108 10:11:09.286609   76230 control.go:45] [engine.Service /emulator/wigswap 7569] UpdateSchema(): done sources: schema/schema.gql [1384B] 
+I1108 10:11:09.286854   76230 control.go:73] [engine.Service /emulator/wigswap 7569] UpdateConnector(default): done sources: connector/mutations.gql [1163B] connector/queries.gql [1855B] 

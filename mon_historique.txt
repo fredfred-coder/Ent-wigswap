@@ -1,0 +1,16 @@
+  269  gpg --full-generate-key\n
+  270  gpg --list-secret-keys --keyid-format LONG\n
+  271  gpg --list-secret-keys --keyid-format LONG\n
+  272  gpg --list-secret-keys --keyid-format LONG\n
+  273  gpg --full-generate-key\n
+  274  gpg --full-generate-key\n
+  275  gpg --list-secret-keys --keyid-format LONG\n
+  276  gpg --full-generate-key\n
+  277  n V
+  278  gpg --full-generate-key\n
+  279  gpg --full-generate-key\n
+  280  gpg --full-generate-key\n
+  281    gpg --full-generate-key\n
+  282  gpg --armor --export YOUR_KEY_ID | pbcopy\n
+  283  gpg --armor --export YOUR_KEY_ID | pbcopy\n
+  284  gpg --list-secret-keys --keyid-format LONG\n

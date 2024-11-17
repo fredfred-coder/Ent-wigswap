@@ -1,0 +1,6 @@
+NSCameraUsageDescription = "\"Demander la permission\"";
+NSMicrophoneUsageDescription = "  \"Pour enregistrer le son de la vidéo, cette application demande la permission pour accéder au micro\"";
+NSPhotoLibraryUsageDescription = " \"Pour télécherger des photos, cette application demande la permission pour accéder à la librairie de photos\"";
+PermissionGroupNotification = "\"Recevez des notifications\"";
+NSContactsUsageDescription = "\"Demander la permission\"";
+NSLocationWhenInUseUsageDescription = "\"Demander la permission\"";

@@ -1,0 +1,30 @@
+
+
+
+services:
+  traefik:
+    image: "traefik:v2.9"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.web.address=:7012"  # Utilisation du port 7012
+    ports:
+      - "7012:7012"  # Redirection du port libre 7012
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - web
+
+  wigswap:
+    image: "nginx:alpine"
+    volumes:
+      - ./html:/usr/share/nginx/html  # Monter tout le répertoire html
+    ports:
+      - "5005:80"  # Redirection du port 5005 vers le port 80 du conteneur
+    networks:
+      - web
+
+networks:
+  web:
+    external: false
+

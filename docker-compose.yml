@@ -1,15 +1,12 @@
-
-
-
 services:
   traefik:
     image: "traefik:v2.9"
     command:
       - "--api.insecure=true"
       - "--providers.docker=true"
-      - "--entrypoints.web.address=:7012"  # Utilisation du port 7012
+      - "--entrypoints.web.address=:7013"  # Changement du port de 7012 à 7013
     ports:
-      - "7012:7012"  # Redirection du port libre 7012
+      - "7013:7013"  # Redirection du port libre 7013
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
@@ -24,7 +21,16 @@ services:
     networks:
       - web
 
+  wave_api:
+    build:
+      context: ./wave_api_directory  # Indiquer le chemin où se trouve le Dockerfile pour créer l'image de wave_api
+    environment:
+      - ENV_VAR1=value1  # Ajouter les variables d'environnement nécessaires ici
+    ports:
+      - "8000:8000"  # Adapter le port selon votre API
+    networks:
+      - web
+
 networks:
   web:
-    external: false
 

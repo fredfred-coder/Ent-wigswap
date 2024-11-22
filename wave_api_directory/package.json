@@ -1,0 +1,19 @@
+{
+  "name": "wave_api",
+  "version": "1.0.0",
+  "description": "API Wave pour wigswap",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Frédéric Theral",
+  "license": "ISC"
+}
+
+
+
+
+

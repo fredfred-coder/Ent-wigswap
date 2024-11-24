@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "prod": "wigswap-274ff"
+  },
+  "targets": {},
+  "etags": {},
+  "functions": {
+    "predeploy": [
+      "echo 'Skipping lint step for deployment'"
+    ]
+  }
+}

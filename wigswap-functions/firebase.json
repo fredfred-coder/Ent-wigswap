@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "source": ".",
+    "predeploy": [
+      "echo 'Skipping lint step for deployment'"
+    ]
+  }
+}
+

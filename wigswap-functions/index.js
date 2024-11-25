@@ -1,53 +1,74 @@
-const { onRequest } = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
+const functions = require("firebase-functions");
 
-// Fonction POST pour initier le paiement
-exports.initiatePayment = onRequest((request, response) => {
-    if (request.method !== "POST") {
-        logger.error("Méthode non autorisée. Seul POST est autorisé.");
-        response.status(405).send("Method Not Allowed");
-        return;
-    }
+exports.initiatePayment = functions.https.onRequest((req, res) => {
+  // Ajout des logs pour inspecter les en-têtes et le corps de la requête
+  console.log("Headers reçus :", req.headers);
+  console.log("Body reçu brut :", req.rawBody ? req.rawBody.toString() : "Aucun corps reçu");
+  
+  // Vérifier le type du corps de la requête
+  console.log("Type du corps de la requête :", typeof req.body);
 
-    // Logs pour déboguer la requête reçue
-    logger.info("Payment initiation request received");
-    logger.info(`Request body: ${JSON.stringify(request.body)}`);
+  // Vérifier le corps de la requête
+  console.log("Payment initiation request received");
+  console.log("Request body:", req.body);
 
-    // Assurez-vous que les paramètres nécessaires sont bien présents
-    const { status, amount, phoneNumber, userId, username, paiementId, date, currency, success_url, error_url } = request.body;
+  // Extraire et loguer chaque champ individuel
+  const {
+    status,
+    amount,
+    phoneNumber,
+    userId,
+    username,
+    paiementId,
+    date,
+    currency,
+    success_url,
+    error_url,
+  } = req.body;
 
-    if (!status || !amount || !phoneNumber || !userId || !username || !paiementId || !date || !currency || !success_url || !error_url) {
-        logger.error("Erreur: Certains paramètres sont manquants dans la requête.");
-        response.status(400).send("Bad Request: Missing required parameters");
-        return;
-    }
+  console.log("Statut:", status);
+  console.log("Montant:", amount);
+  console.log("Numéro de téléphone:", phoneNumber);
+  console.log("UserId:", userId);
+  console.log("Username:", username);
+  console.log("PaiementId:", paiementId);
+  console.log("Date:", date);
+  console.log("Devise:", currency);
+  console.log("URL en cas de succès:", success_url);
+  console.log("URL en cas d'erreur:", error_url);
 
-    // Ajouter des logs supplémentaires pour vérifier chaque paramètre reçu
-    logger.info(`Status: ${status}`);
-    logger.info(`Amount: ${amount}`);
-    logger.info(`PhoneNumber: ${phoneNumber}`);
-    logger.info(`UserId: ${userId}`);
-    logger.info(`Username: ${username}`);
-    logger.info(`PaiementId: ${paiementId}`);
-    logger.info(`Date: ${date}`);
-    logger.info(`Currency: ${currency}`);
-    logger.info(`Success URL: ${success_url}`);
-    logger.info(`Error URL: ${error_url}`);
+  // Vérification des paramètres obligatoires
+  if (
+    !status ||
+    !amount ||
+    !phoneNumber ||
+    !userId ||
+    !username ||
+    !paiementId ||
+    !date ||
+    !currency ||
+    !success_url ||
+    !error_url
+  ) {
+    console.error("Erreur : Paramètres manquants dans la requête");
+    return res.status(400).send({ message: "Paramètres manquants" });
+  }
 
-    // Simule une réponse de succès
-    logger.info("Tous les paramètres sont présents. Paiement initié avec succès.");
-    response.status(200).send({
-        message: "Payment initiation successful",
-        status: status,
-        amount: amount,
-        phoneNumber: phoneNumber,
-        userId: userId,
-        username: username,
-        paiementId: paiementId,
-        date: date,
-        currency: currency,
-        success_url: success_url,
-        error_url: error_url
-    });
+  console.log("Tous les paramètres sont présents. Paiement initié avec succès.");
+
+  // Répondre avec succès
+  res.status(200).send({
+    message: "Payment initiation successful",
+    status,
+    amount,
+    phoneNumber,
+    userId,
+    username,
+    paiementId,
+    date,
+    currency,
+    success_url,
+    error_url,
+  });
 });
 

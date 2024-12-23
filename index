@@ -5,6 +5,20 @@ const admin = require('firebase-admin');
 // Initialisation Firebase
 admin.initializeApp();
 
+// Fonction personnalisée pour extraire des données de la réponse JSON
+function extractPostResponseData(jsonResponse) {
+  try {
+    const response = JSON.parse(jsonResponse);
+    const waveLaunchUrl = response["waveLaunchUrl"];
+    const paymentId = response["paymentId"];
+    console.log("Données extraites :", { waveLaunchUrl, paymentId });
+    return { waveLaunchUrl, paymentId };
+  } catch (error) {
+    console.error("Erreur lors de l'extraction des données JSON :", error);
+    return null;
+  }
+}
+
 // Fonction Firebase pour créer une session de paiement
 exports.createPaymentSession = functions.https.onRequest(async (req, res) => {
   console.log("==> Fonction createPaymentSession déclenchée");
@@ -18,11 +32,11 @@ exports.createPaymentSession = functions.https.onRequest(async (req, res) => {
     }
 
     // Étape 1 : Récupération des paramètres
-    const { amount, currency, userId } = req.body;
-    console.log("Paramètres reçus :", { amount, currency, userId });
+    const { amount, currency, userId, phoneNumber } = req.body;
+    console.log("Paramètres reçus :", { amount, currency, userId, phoneNumber });
 
     // Validation des paramètres
-    if (!amount || !currency || !userId) {
+    if (!amount || !currency || !userId || !phoneNumber) {
       console.error("Paramètres manquants ou invalides :", req.body);
       return res.status(400).send({ error: "Paramètres manquants ou invalides" });
     }
@@ -32,11 +46,13 @@ exports.createPaymentSession = functions.https.onRequest(async (req, res) => {
     console.log("ID de paiement généré :", paymentId);
 
     // Étape 3 : Préparation des données pour Firestore
+    const waveLaunchUrl = `https://pay.wave.com/c/${paymentId}?a=${amount}&c=${currency}&m=${encodeURIComponent(phoneNumber)}`;
     const paymentData = {
       amount,
       currency,
       userId,
-      waveLaunchUrl: `https://pay.wave.com/c/${paymentId}?a=${amount}&c=${currency}`,
+      phoneNumber,
+      waveLaunchUrl,
       status: 'pending',
       createdAt: admin.firestore.Timestamp.now(),
     };
@@ -46,10 +62,18 @@ exports.createPaymentSession = functions.https.onRequest(async (req, res) => {
     await admin.firestore().collection('paiement').doc(paymentId).set(paymentData);
     console.log("Document créé avec succès dans Firestore :", paymentId);
 
+    // Étape 5 : Extraction des données via la fonction personnalisée
+    const jsonResponse = JSON.stringify({
+      waveLaunchUrl: paymentData.waveLaunchUrl,
+      paymentId: paymentId,
+    });
+    const extractedData = extractPostResponseData(jsonResponse);
+    console.log("Données extraites après traitement :", extractedData);
+
     // Réponse à l'utilisateur
     return res.status(201).send({
-      paymentId,
-      waveLaunchUrl: paymentData.waveLaunchUrl,
+      paymentId: extractedData.paymentId,
+      waveLaunchUrl: extractedData.waveLaunchUrl,
     });
   } catch (error) {
     console.error("Erreur dans createPaymentSession :", error.message, error.stack);

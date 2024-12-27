@@ -1,83 +1,116 @@
-// Importation des modules nécessaires
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+const { onRequest } = require("firebase-functions/v2/https");
+const { logger } = require("firebase-functions");
+const axios = require("axios");
+const admin = require("firebase-admin");
 
-// Initialisation Firebase
-admin.initializeApp();
+if (!admin.apps.length) {
+  admin.initializeApp();
+}
 
-// Fonction personnalisée pour extraire des données de la réponse JSON
-function extractPostResponseData(jsonResponse) {
-  try {
-    const response = JSON.parse(jsonResponse);
-    const waveLaunchUrl = response["waveLaunchUrl"];
-    const paymentId = response["paymentId"];
-    console.log("Données extraites :", { waveLaunchUrl, paymentId });
-    return { waveLaunchUrl, paymentId };
-  } catch (error) {
-    console.error("Erreur lors de l'extraction des données JSON :", error);
-    return null;
+const WAVE_API_KEY = "wave_sn_prod_pRHzF_DXqLweifEdNSX9QIu3Arsi7Hlsb0AKOxlfogc8bVLZsiAILsS53GUnHJO2bXa_yzCoVGKyYv2C6sbga0jgbBN6JT8IaA";
+
+// Custom Function : getPostResponseStatus
+function getPostResponseStatus(apiResponse) {
+  if (apiResponse && apiResponse.hasOwnProperty("status")) {
+    return apiResponse["status"].toString();
+  } else {
+    return "unknown"; // Renvoie 'unknown' si 'status' est absent
   }
 }
 
-// Fonction Firebase pour créer une session de paiement
-exports.createPaymentSession = functions.https.onRequest(async (req, res) => {
-  console.log("==> Fonction createPaymentSession déclenchée");
-
+// Custom Function : extractPostResponseData
+function extractPostResponseData(responseData) {
   try {
-    console.log("Méthode de requête :", req.method);
+    const waveLaunchUrl = responseData["wave_launch_url"];
+    const paymentId = responseData["paymentId"];
+    if (!waveLaunchUrl || !paymentId) {
+      throw new Error("Données manquantes dans la réponse de l'API");
+    }
+    logger.info("Données extraites :", { waveLaunchUrl, paymentId });
+    return { waveLaunchUrl, paymentId };
+  } catch (error) {
+    logger.error("Erreur lors de l'extraction des données :", error.message);
+    throw new Error("Impossible d'extraire les données de la réponse");
+  }
+}
 
-    if (req.method !== "POST") {
-      console.warn("Méthode non autorisée :", req.method);
-      return res.status(405).send({ error: "Méthode non autorisée" });
+// Fonction principale : createPaymentSession
+exports.createPaymentSession = onRequest(async (req, res) => {
+  try {
+    logger.info("Requête reçue :", req.body);
+
+    const { amount, currency, success_url, error_url, userId, phone_number } = req.body;
+
+    if (!amount || !currency || !success_url || !error_url || !userId || !phone_number) {
+      logger.error("Paramètres obligatoires manquants.");
+      return res.status(400).send({ status: "failed", message: "Paramètres obligatoires manquants." });
     }
 
-    // Étape 1 : Récupération des paramètres
-    const { amount, currency, userId, phoneNumber } = req.body;
-    console.log("Paramètres reçus :", { amount, currency, userId, phoneNumber });
+    logger.info("phone_number extrait :", phone_number);
 
-    // Validation des paramètres
-    if (!amount || !currency || !userId || !phoneNumber) {
-      console.error("Paramètres manquants ou invalides :", req.body);
-      return res.status(400).send({ error: "Paramètres manquants ou invalides" });
-    }
-
-    // Étape 2 : Génération de l'ID du document
-    const paymentId = admin.firestore().collection('paiement').doc().id;
-    console.log("ID de paiement généré :", paymentId);
-
-    // Étape 3 : Préparation des données pour Firestore
-    const waveLaunchUrl = `https://pay.wave.com/c/${paymentId}?a=${amount}&c=${currency}&m=${encodeURIComponent(phoneNumber)}`;
     const paymentData = {
       amount,
       currency,
-      userId,
-      phoneNumber,
-      waveLaunchUrl,
-      status: 'pending',
-      createdAt: admin.firestore.Timestamp.now(),
+      success_url,
+      error_url,
+      phone_number,
     };
-    console.log("Données prêtes pour Firestore :", paymentData);
 
-    // Étape 4 : Enregistrement dans Firestore
-    await admin.firestore().collection('paiement').doc(paymentId).set(paymentData);
-    console.log("Document créé avec succès dans Firestore :", paymentId);
+    logger.info("Données envoyées à Wave :", paymentData);
 
-    // Étape 5 : Extraction des données via la fonction personnalisée
-    const jsonResponse = JSON.stringify({
-      waveLaunchUrl: paymentData.waveLaunchUrl,
-      paymentId: paymentId,
-    });
-    const extractedData = extractPostResponseData(jsonResponse);
-    console.log("Données extraites après traitement :", extractedData);
+    const waveResponse = await axios.post(
+      "https://api.wave.com/v1/checkout/sessions",
+      paymentData,
+      { headers: { Authorization: `Bearer ${WAVE_API_KEY}`, "Content-Type": "application/json" } }
+    );
 
-    // Réponse à l'utilisateur
-    return res.status(201).send({
-      paymentId: extractedData.paymentId,
-      waveLaunchUrl: extractedData.waveLaunchUrl,
-    });
+    if (waveResponse.status === 200 && waveResponse.data) {
+      // Extraction des données avec extractPostResponseData
+      const { waveLaunchUrl, paymentId } = extractPostResponseData(waveResponse.data);
+
+      // Vérification du statut avec getPostResponseStatus
+      const paymentStatus = getPostResponseStatus(waveResponse.data);
+
+      logger.info("Statut extrait :", paymentStatus);
+
+      if (paymentStatus === "success") {
+        // Cas succès : Sauvegarde dans Firestore
+        const paymentDataToSave = {
+          userId,
+          amount,
+          currency,
+          phone_number,
+          waveLaunchUrl,
+          paymentId,
+          status: paymentStatus,
+          createdAt: admin.firestore.FieldValue.serverTimestamp(),
+        };
+
+        logger.info("Données sauvegardées dans Firestore :", paymentDataToSave);
+
+        await admin.firestore().collection("paiement").add(paymentDataToSave);
+
+        return res.status(200).send({
+          status: "success",
+          waveLaunchUrl,
+          paymentId,
+        });
+      } else {
+        // Cas rejeté : retour d'un message d'échec
+        logger.warn("Paiement rejeté avec statut :", paymentStatus);
+        return res.status(400).send({
+          status: "rejected",
+          message: "Le paiement a été rejeté.",
+          reason: `Statut renvoyé : '${paymentStatus}'`,
+        });
+      }
+    } else {
+      logger.error("Réponse inattendue de Wave :", waveResponse.data);
+      return res.status(500).send({ status: "failed", message: "Réponse inattendue de Wave." });
+    }
   } catch (error) {
-    console.error("Erreur dans createPaymentSession :", error.message, error.stack);
-    return res.status(500).send({ error: "Erreur interne" });
+    logger.error("Erreur :", error.message);
+    return res.status(500).send({ status: "failed", message: "Erreur serveur.", error: error.message });
   }
 });
 

@@ -1,0 +1,82 @@
+const { onRequest } = require("firebase-functions/v2/https");
+const { logger } = require("firebase-functions");
+const admin = require("firebase-admin");
+
+if (!admin.apps.length) {
+  admin.initializeApp();
+}
+
+// Fonction personnalisée : extractPostResponseData
+function extractPostResponseData(responseData) {
+  try {
+    const waveLaunchUrl = responseData["waveLaunchUrl"];
+    const paymentId = responseData["paymentId"];
+    if (!waveLaunchUrl || !paymentId) {
+      throw new Error("Données manquantes dans la réponse de l'API");
+    }
+    logger.info("Données extraites :", { waveLaunchUrl, paymentId });
+    return { waveLaunchUrl, paymentId };
+  } catch (error) {
+    logger.error("Erreur lors de l'extraction des données :", error.message);
+    throw new Error("Impossible d'extraire les données de la réponse");
+  }
+}
+
+// Fonction personnalisée : getPostResponseStatus
+function getPostResponseStatus(apiResponse) {
+  if (apiResponse && apiResponse.hasOwnProperty("status")) {
+    return apiResponse["status"].toString();
+  } else {
+    return "unknown"; // Renvoie "unknown" si le statut est absent
+  }
+}
+
+// Fonction principale : createPaymentSession
+exports.createPaymentSession = onRequest(async (req, res) => {
+  try {
+    const { amount, currency, success_url, error_url, userId } = req.body;
+
+    // Récupérer le numéro de téléphone depuis Firestore
+    const userDoc = await admin.firestore().collection("users").doc(userId).get();
+    if (!userDoc.exists) {
+      logger.error("Utilisateur introuvable avec userId :", userId);
+      return res.status(404).send({ status: "failed", message: "Utilisateur introuvable." });
+    }
+
+    const userData = userDoc.data();
+    const phone_number = userData.phone_number;
+
+    if (!phone_number) {
+      logger.error("Numéro de téléphone manquant pour userId :", userId);
+      return res.status(400).send({ status: "failed", message: "Numéro de téléphone manquant." });
+    }
+
+    // Données pour Firestore
+    const paymentId = admin.firestore().collection("paiement").doc().id;
+    const waveLaunchUrl = `https://pay.wave.com/c/${paymentId}?a=${amount}&c=${currency}`;
+    const paymentData = {
+      userId,
+      phone_number,
+      amount,
+      currency,
+      waveLaunchUrl,
+      status: "pending",
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    // Sauvegarde dans Firestore
+    await admin.firestore().collection("paiement").doc(paymentId).set(paymentData);
+
+    logger.info("Données sauvegardées dans Firestore :", paymentData);
+
+    return res.status(200).send({
+      status: "success",
+      waveLaunchUrl,
+      paymentId,
+    });
+  } catch (error) {
+    logger.error("Erreur dans createPaymentSession :", error.message);
+    return res.status(500).send({ status: "failed", message: "Erreur serveur." });
+  }
+});
+

@@ -1,89 +1,172 @@
-// Importation des modules nécessaires
-const functions = require("firebase-functions");
+const { onRequest } = require("firebase-functions/v2/https");
+const { logger } = require("firebase-functions");
 const admin = require("firebase-admin");
-const cors = require("cors")({ origin: true });
-admin.initializeApp();
+const Joi = require("joi");
 
-// Fonction Firebase HTTP pour la création d'une session de paiement
-exports.createPaymentSession = functions.region("us-central1").https.onRequest(async (req, res) => {
-  console.log("==> Fonction createPaymentSession déclenchée");
-
-  try {
-    console.log("Méthode de requête :", req.method);
-
-    if (req.method !== "POST") {
-      console.warn("Méthode non autorisée :", req.method);
-      return res.status(405).send({ error: "Méthode non autorisée" });
-    }
-
-    const { amount, currency, userId, phone_number, success_url, error_url } = req.body;
-
-    console.log("Paramètres reçus :", { amount, currency, userId, phone_number });
-
-    // Validation des paramètres requis
-    if (!amount || !currency || !userId || !phone_number) {
-      console.error("Paramètres manquants ou invalides :", req.body);
-      return res.status(400).send({ error: "Paramètres manquants ou invalides" });
-    }
-
-    // Génération de l'ID de paiement
-    const paymentId = admin.firestore().collection("paiements").doc().id;
-    console.log("ID de paiement généré :", paymentId);
-
-    // Construction de l'URL de paiement Wave
-    const waveLaunchUrl = `https://pay.wave.com/c/${paymentId}?a=${amount}&c=${currency}`;
-    console.log("URL de paiement Wave générée :", waveLaunchUrl);
-
-    // Préparation des données pour Firestore
-    const paymentData = {
-      userId,
-      phone_number,
-      amount,
-      currency,
-      success_url,
-      error_url,
-      wave_launch_url: waveLaunchUrl,
-      status: "pending",
-      createdAt: admin.firestore.Timestamp.now(),
-    };
-
-    console.log("Données prêtes pour Firestore :", paymentData);
-
-    // Enregistrement dans Firestore
-    const ref = admin.firestore().collection("paiements").doc(paymentId);
-    await ref.set(paymentData);
-    console.log("Paiement enregistré avec succès dans Firestore :", paymentId);
-
-    // Réponse avec l'URL générée
-    return res.status(201).send({
-      paymentId,
-      wave_launch_url: waveLaunchUrl,
-    });
-  } catch (error) {
-    console.error("Erreur dans createPaymentSession :", error.message, error.stack);
-    return res.status(500).send({ error: "Erreur interne" });
-  }
-});
-
-// Fonction personnalisée pour extraire des données spécifiques de la réponse JSON
-function extractPostResponseData(jsonResponse) {
-  try {
-    const response = JSON.parse(jsonResponse);
-    const waveLaunchUrl = response["wave_launch_url"];
-    const paymentId = response["paymentId"];
-    console.log("Données extraites :", { waveLaunchUrl, paymentId });
-    return { waveLaunchUrl, paymentId };
-  } catch (error) {
-    console.error("Erreur lors de l'extraction des données JSON :", error);
-    return null;
-  }
+if (!admin.apps.length) {
+    admin.initializeApp();
 }
 
-// Exemple d'utilisation de la fonction extractPostResponseData
-const exampleJsonResponse = JSON.stringify({
-  wave_launch_url: "https://pay.wave.com/c/example?a=1000&c=XOF",
-  paymentId: "example123",
+// Configuration des environnements multiples
+const CONFIG = {
+    WAVE_BASE_URL: process.env.WAVE_BASE_URL || "https://pay.wave.com",
+    AUTH_KEY: process.env.AUTH_KEY || "secret-key",
+};
+
+// Fonction personnalisée : Validation des paramètres d'entrée
+const validateInput = (body) => {
+    const schema = Joi.object({
+        amount: Joi.number().positive().required(),
+        currency: Joi.string().length(3).required(),
+        success_url: Joi.string().uri().required(),
+        error_url: Joi.string().uri().required(),
+        userId: Joi.string().required(),
+    });
+    return schema.validate(body);
+};
+
+// Fonction personnalisée : Gestion des erreurs
+const handleError = (res, error, statusCode = 500) => {
+    logger.error(error.message);
+    res.status(statusCode).send({ status: "failed", message: error.message });
+};
+
+// Fonction principale : Création de session de paiement
+exports.createPaymentSession = onRequest(async (req, res) => {
+    logger.info("==> Fonction createPaymentSession déclenchée");
+    try {
+        // Validation des données d'entrée
+        const { error } = validateInput(req.body);
+        if (error) {
+            return handleError(res, new Error(error.details[0].message), 400);
+        }
+
+        const { amount, currency, success_url, error_url, userId } = req.body;
+
+        // Récupération des informations utilisateur depuis Firestore
+        const userDoc = await admin.firestore().collection("users").doc(userId).get();
+        if (!userDoc.exists) {
+            return handleError(res, new Error(`Utilisateur introuvable : userId=${userId}`), 404);
+        }
+
+        const userData = userDoc.data();
+        const phone_number = userData.phone_number || null;
+        const username = userData.username || null;
+
+        if (!phone_number || !username) {
+            return handleError(
+                res,
+                new Error(`Données utilisateur incomplètes : userId=${userId}, phone_number ou username manquant`),
+                400
+            );
+        }
+
+        // Génération de l'ID de paiement
+        const paymentId = admin.firestore().collection("paiement").doc().id;
+
+        // Tentative de paiement direct via API Wave
+        let paymentStatus = "pending"; // Statut par défaut
+        try {
+            // Appel à une fonction simulée ou réelle pour effectuer le paiement
+            const paymentResult = await processWavePayment(userId, amount, currency);
+            paymentStatus = paymentResult.status; // Ex. "success" ou "failed"
+        } catch (error) {
+            logger.error(`Erreur lors de la tentative de paiement direct : ${error.message}`);
+            paymentStatus = "failed";
+        }
+
+        // Génération de l'URL Wave pour fallback
+        const waveLaunchUrl = `${CONFIG.WAVE_BASE_URL}/c/${paymentId}?a=${amount}&c=${currency}`;
+
+        logger.info(`Session de paiement créée : paymentId=${paymentId}, statut=${paymentStatus}`);
+
+        // Enregistrement dans Firestore
+        await admin.firestore().collection("paiement").doc(paymentId).set({
+            userId,
+            phone_number,
+            username,
+            amount,
+            currency,
+            waveLaunchUrl,
+            success_url,
+            error_url,
+            status: paymentStatus,
+            statusHistory: [
+                {
+                    status: paymentStatus,
+                    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+                },
+            ],
+            createdAt: admin.firestore.FieldValue.serverTimestamp(),
+        });
+
+        // Réponse API
+        return res.status(200).send({
+            status: paymentStatus,
+            waveLaunchUrl,
+            paymentId,
+            userId,
+            phone_number,
+            username,
+        });
+    } catch (error) {
+        return handleError(res, error);
+    }
 });
-const extractedData = extractPostResponseData(exampleJsonResponse);
-console.log("Exemple de données extraites :", extractedData);
+
+// Fonction personnalisée : Traitement du paiement avec l'API Wave
+const processWavePayment = async (userId, amount, currency) => {
+    // Logique pour appeler l'API Wave et vérifier si le paiement est possible directement
+    logger.info(`Tentative de paiement direct pour userId=${userId}, amount=${amount}, currency=${currency}`);
+    // Simulez un appel API ou implémentez une logique réelle ici
+    const isSuccess = Math.random() > 0.5; // Simulez un résultat aléatoire
+    if (isSuccess) {
+        return { status: "success" }; // Paiement accepté
+    } else {
+        throw new Error("Paiement échoué"); // Paiement refusé
+    }
+};
+
+// Fonction principale : Webhook pour les mises à jour des paiements
+exports.paymentWebhook = onRequest(async (req, res) => {
+    logger.info("==> Fonction paymentWebhook déclenchée");
+    try {
+        // Vérification de la clé d'authentification
+        if (req.headers["x-wave-signature"] !== CONFIG.AUTH_KEY) {
+            return handleError(res, new Error("Clé d'authentification invalide"), 403);
+        }
+
+        const { paymentId, status } = req.body;
+        if (!paymentId || !status) {
+            return handleError(res, new Error("Paramètres manquants ou invalides"), 400);
+        }
+
+        const validStatuses = ["pending", "completed", "failed", "canceled"];
+        if (!validStatuses.includes(status)) {
+            return handleError(res, new Error(`Statut invalide : ${status}`), 400);
+        }
+
+        const paymentRef = admin.firestore().collection("paiement").doc(paymentId);
+        const paymentDoc = await paymentRef.get();
+        if (!paymentDoc.exists) {
+            return handleError(res, new Error(`Paiement introuvable : paymentId=${paymentId}`), 404);
+        }
+
+        // Mise à jour du statut dans Firestore
+        await paymentRef.update({
+            status,
+            statusHistory: admin.firestore.FieldValue.arrayUnion({
+                status,
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            }),
+        });
+
+        const { userId } = paymentDoc.data();
+        logger.info(`Mise à jour du paiement pour userId=${userId}, statut=${status}`);
+
+        return res.status(200).send({ status: "success", message: "Mise à jour réussie." });
+    } catch (error) {
+        return handleError(res, error);
+    }
+});
 

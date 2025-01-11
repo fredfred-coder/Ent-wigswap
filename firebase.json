@@ -4,8 +4,9 @@
     "indexes": "firestore.indexes.json"
   },
   "functions": {
-    "source": "functions",
+    "source": "functions", 
     "codebase": "default",
+    "runtime": "nodejs18",
     "ignore": [
       "node_modules",
       ".git",
@@ -40,33 +41,17 @@
     "rules": "storage.rules"
   },
   "emulators": {
-    "auth": {
-      "port": 15099
-    },
-    "firestore": {
-      "port": 15080
-    },
-    "functions": {
-      "port": 15001
-    },
-    "database": {
-      "port": 9000
-    },
-    "hosting": {
-      "port": 15000
-    },
-    "pubsub": {
-      "port": 15085
-    },
-    "storage": {
-      "port": 9199
-    },
-    "eventarc": {
-      "port": 9299
-    },
+    "auth": { "port": 0 },
+    "firestore": { "port": 0 },
+    "functions": { "port": 0 },
+    "database": { "port": 0 },
+    "hosting": { "port": 0 },
+    "pubsub": { "port": 0 },
+    "storage": { "port": 0 },
+    "eventarc": { "port": 0 },
     "ui": {
       "enabled": true,
-      "port": 14000
+      "port": 0
     },
     "singleProjectMode": true
   },

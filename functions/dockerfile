@@ -1,0 +1,21 @@
+# Utilisation de l'image officielle Node.js 18 avec gestion ARM pour Mac M1
+FROM node:18-alpine as build
+
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /usr/src/app
+
+# Copier uniquement les fichiers nécessaires pour l'installation des dépendances
+COPY functions/package*.json ./
+
+# Installer les dépendances (Firebase Functions, Firebase Admin, Joi, dotenv)
+RUN npm install --production
+
+# Copier le reste des fichiers source
+COPY functions/ ./
+
+# Exposer le port pour Firebase Functions Emulator
+EXPOSE 5001
+
+# Commande de démarrage du conteneur avec Firebase Emulator
+CMD ["npx", "firebase", "emulators:start", "--only", "functions"]
+
